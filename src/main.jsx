@@ -8,11 +8,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Login from "./components/login/Login";
+import BookDetails from './components/bookdetails/BookDetails';
 
 const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/bookdetails",
+    element: <BookDetails/>,
   },
 ]);
 

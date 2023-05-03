@@ -1,5 +1,6 @@
 import "./bookdetails.css";
 
+const BookDetails = () => {
 
 
   return (
@@ -21,6 +22,6 @@ import "./bookdetails.css";
       </div>
     </main>
   );
-
+  }
 
 export default BookDetails;
