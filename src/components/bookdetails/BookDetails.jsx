@@ -2,8 +2,13 @@ import "./bookdetails.css";
 
 const BookDetails = () => {
 
-
-  return (
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      console.log("submit");
+    };
+  
+    return 
+    (
     <main className="container">
       <div className="background-wrapper--desktop">
         <img
@@ -14,14 +19,14 @@ const BookDetails = () => {
       </div>
       <div className="form-wrapper">
  
-            <button type="submit" className="button">
-              Login
+            <button type="subscribe" className="button">
+              Subscribe
             </button>
-        
-       
       </div>
     </main>
   );
   }
 
 export default BookDetails;
+
+
