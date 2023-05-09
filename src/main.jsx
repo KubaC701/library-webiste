@@ -9,15 +9,20 @@ import {
 } from "react-router-dom";
 import Login from "./components/login/Login";
 import BookDetails from './components/bookdetails/BookDetails';
+import BooksList from "./components/BooksList/BooksList";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <BooksList />,
+  },
   {
     path: "/login",
     element: <Login />,
   },
   {
     path: "/bookdetails",
-    element: <BookDetails/>,
+    element: <BookDetails />,
   },
 ]);
 
