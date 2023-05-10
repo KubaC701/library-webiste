@@ -1,13 +1,14 @@
 h1  {
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
     font-weight: 600;
     margin-bottom: 5px;
     margin-top: 15px;
+    text-align: left;
     }
 
 h2  {
-    font-size: 12px;
+    font-size: 8px;
     color: #dad2c7;
     display: block;
     font-weight: 50;
@@ -30,12 +31,12 @@ span {
     background-color: #E3893E;
     transition: background-color 0.2s ease-in-out;
     border-radius: 8px;
-    padding: 12px;
+    padding: 6px;
     width: 100%;
     border: none;
     display: block;
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.0rem;
     }
   
 .button:hover {
@@ -46,9 +47,9 @@ span {
 .frame {
     border-style: groove;
     border-color: #5e5e5e;
-    margin: auto;
+    margin: 0;
     display: block;
-    width: 50%;
+    width: 100%;
     padding: 1%;
     }
 
@@ -63,7 +64,7 @@ span {
     }
 
 .form-wrapper {
-    flex: 60%;
+    flex: 40%;
     display: flex-wrap;
     flex-direction: column;
     padding: 16px;
@@ -75,13 +76,15 @@ span {
 
 
 .divdescription {
-    width: 50%;  
+    width: 100%;  
     background-color: #242424;
     color: #fff;
     border-radius: 8px;
     padding: 16px;
     border: none;
     text-align: justify;
+    margin: 0px;
+   
     }
 
 
@@ -96,3 +99,25 @@ span {
         margin-bottom: 16px;
       }
       
+
+      .tab {
+
+
+
+        background: linear-gradient(180deg, #7e3636 25%, rgba(0, 0, 0, 10%) 100%), url('/background.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-gap: 10px;
+        align-content: center;
+
+
+
+
+
+
+      }
+
+
