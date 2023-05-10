@@ -1,21 +1,16 @@
 h1  {
+    font-size: 18px;
     color: #ffffff;
     font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    margin-top: 15px;
     }
 
 h2  {
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 12px;
+    color: #dad2c7;
     display: block;
     font-weight: 50;
-    margin: 0 0 10px 0px;
-    }
-
-p   {
-    color: #ffffff;
-    font-size:12px;
     }
 
 span {    
@@ -29,10 +24,7 @@ span {
     font-weight: 6;
     }
  
-.middlecolor
-    {
-    color: #dad2c7;
-    }
+
  
 .button {
     background-color: #E3893E;
@@ -72,7 +64,7 @@ span {
 
 .form-wrapper {
     flex: 60%;
-    display: flex;
+    display: flex-wrap;
     flex-direction: column;
     padding: 16px;
     justify-content: center;
@@ -81,8 +73,9 @@ span {
     background-color: #000000;
     }
 
+
 .divdescription {
-    width: 100%;  
+    width: 50%;  
     background-color: #242424;
     color: #fff;
     border-radius: 8px;
@@ -90,3 +83,16 @@ span {
     border: none;
     text-align: justify;
     }
+
+
+
+    .input {
+        width: 100%;
+        background-color: #242424;
+        color: #fff;
+        border-radius: 8px;
+        padding: 16px;
+        border: none;
+        margin-bottom: 16px;
+      }
+      
