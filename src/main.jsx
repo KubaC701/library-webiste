@@ -6,7 +6,9 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './components/login/Login';
 import BookDetails from './components/bookdetails/BookDetails';
-import BooksList from './components/BooksList/BooksList';
+import BooksList from "./components/BooksList/BooksList";
+import BookSearch from './components/booksearch/BookSearch';
+
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,18 @@ const router = createBrowserRouter([
     path: '/bookdetails',
     element: <BookDetails />,
   },
+  {
+    path: "/booksearch",
+    element: <BookSearch />,
+  },
+
+
+
+
+
+
+
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
