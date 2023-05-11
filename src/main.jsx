@@ -3,28 +3,34 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './components/login/Login';
 import BookDetails from './components/bookdetails/BookDetails';
 import BooksList from './components/BooksList/BooksList';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import { AuthContextProvider } from './contexts/AuthContext';
+import users from './data/users.json';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <BooksList />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/bookdetails',
-    element: <BookDetails />,
-  },
-]);
+localStorage.setItem('users', JSON.stringify(users));
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <AuthContextProvider>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <BooksList />
+              </ProtectedRoute>
+            }
+          >
+            <Route path="/bookdetails" element={<BookDetails />} />
+          </Route>
+        </Routes>
+      </AuthContextProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
