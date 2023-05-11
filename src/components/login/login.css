@@ -1,4 +1,4 @@
-.container {
+.login__container {
   padding: 16px 16px 0;
   min-height: 100vh;
   background: linear-gradient(180deg, #000000 25%, rgba(0, 0, 0, 10%) 100%), url('/background.png');
@@ -7,12 +7,12 @@
   display: flex;
 }
 
-.logo {
+.login__logo {
   margin: auto;
   display: block;
 }
 
-.title {
+.login__title {
   color: #e3893e;
   text-align: center;
   margin: 0;
@@ -21,14 +21,14 @@
   font-size: 3rem;
 }
 
-.label {
+.login__label {
   color: #e3893e;
   display: block;
   font-weight: 600;
   margin: 0 0 4px 8px;
 }
 
-.input {
+.login__input {
   width: 100%;
   background-color: #242424;
   color: #fff;
@@ -37,11 +37,11 @@
   border: none;
 }
 
-.input-login {
+.login__input-login {
   margin-bottom: 16px;
 }
 
-.button {
+.login__button {
   background-color: #e3893e;
   transition: background-color 0.2s ease-in-out;
   border-radius: 8px;
@@ -54,12 +54,12 @@
   font-size: 1.25rem;
 }
 
-.button:hover {
+.login__button:hover {
   cursor: pointer;
   background-color: #d2782d;
 }
 
-.background {
+.login__background {
   position: absolute;
   left: 0;
   top: 0;
@@ -67,7 +67,7 @@
   z-index: -2;
 }
 
-.background::after {
+.login__background::after {
   content: '';
   background-color: #000;
   position: absolute;
@@ -79,23 +79,23 @@
   display: block;
 }
 
-.form {
+.login__form {
   max-width: 500px;
   margin: auto;
 }
 
-.background-wrapper--desktop {
+.login__background-wrapper--desktop {
   display: none;
   flex: 40%;
 }
 
-.background--desktop {
+.login__background--desktop {
   width: 100%;
   max-height: 100vh;
   opacity: 0.35;
 }
 
-.form-wrapper {
+.login__form-wrapper {
   flex: 60%;
   display: flex;
   flex-direction: column;
@@ -104,16 +104,16 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .container {
+  .login__container {
     background: #000;
     padding: 0;
   }
-  .background-wrapper--desktop {
+  .login__background-wrapper--desktop {
     display: block;
   }
 }
 
-.toast {
+.login__toast {
   background-color: #ae2b2b;
   color: white;
   position: fixed;
