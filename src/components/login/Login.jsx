@@ -1,9 +1,28 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import useAuthContext from '../../contexts/AuthContext';
 import './login.css';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [isLoginError, setIsLoginError] = useState(false);
+  const { signIn } = useAuthContext();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('submit');
+
+    const { login, password } = event.target.elements;
+    const isValidUser = signIn({ login: login.value, password: password.value });
+
+    if (isValidUser) {
+      navigate('/', { replace: true });
+    } else {
+      setIsLoginError(true);
+
+      setTimeout(() => {
+        setIsLoginError(false);
+      }, 5000);
+    }
   };
 
   return (
@@ -30,6 +49,7 @@ const Login = () => {
           </form>
         </div>
       </div>
+      {isLoginError && <div className="toast">Login or password is incorrect</div>}
     </main>
   );
 };
