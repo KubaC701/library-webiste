@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <main className="login__container">
+    <main className="login">
       <div className="login__background-wrapper--desktop">
         <img src="/background.png" alt="" className="login__background--desktop" />
       </div>
