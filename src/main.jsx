@@ -26,9 +26,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 <BooksList />
               </ProtectedRoute>
             }
-          >
-            <Route path="/bookdetails" element={<BookDetails />} />
-          </Route>
+          />
+          <Route path="/bookdetails" element={<BookDetails />} />
         </Routes>
       </AuthContextProvider>
     </BrowserRouter>
