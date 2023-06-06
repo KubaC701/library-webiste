@@ -6,11 +6,11 @@ const AuthContext = createContext(null);
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(getActiveUser());
 
-  const signIn = (newUser) => {
-    const isValidUser = authorizeUser(newUser.login, newUser.password);
-    setUser({ login: newUser.login, password: newUser.password });
+  const signIn = (credentials) => {
+    const user = authorizeUser(credentials.login, credentials.password);
+    setUser(user);
 
-    return isValidUser;
+    return !!user;
   };
 
   const signOut = () => {
