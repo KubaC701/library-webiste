@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu {
+  position: relative;
+}
+
+.header__logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.header__logo {
+  height: 5rem;
+}
+
+.header__heading {
+  text-transform: uppercase;
+  color: var(--color-primary);
+}

@@ -15,13 +15,13 @@ export const removeUser = (login) => {
 export const authorizeUser = (login, password) => {
   const users = getUsers();
 
-  const isUserExists = users.some((user) => user.login === login && user.password === password);
+  const activeUser = users.find((user) => user.login === login && user.password === password);
 
-  if (isUserExists) {
-    localStorage.setItem('active-user', JSON.stringify({ login, password }));
+  if (activeUser) {
+    localStorage.setItem('active-user', JSON.stringify(activeUser));
   }
 
-  return isUserExists;
+  return activeUser;
 };
 
 export const logoutUser = () => {
@@ -30,3 +30,9 @@ export const logoutUser = () => {
 
 export const getActiveUser = () =>
   localStorage.getItem('active-user') ? JSON.parse(localStorage.getItem('active-user')) : null;
+
+export const ROLES = {
+  ADMIN: 'admin',
+  USER: 'user',
+  LIBRARIAN: 'librarian',
+};
