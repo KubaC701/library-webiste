@@ -4,33 +4,17 @@ import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import './styles/variables.css';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './components/login/Login';
-import BookDetails from './components/bookdetails/BookDetails';
-import BooksList from './components/BooksList/BooksList';
-import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import { AuthContextProvider } from './contexts/AuthContext';
 import users from './data/users.json';
+import { USERS } from './constants/users';
+import Router from './components/Router/Router';
 
-localStorage.setItem('users', JSON.stringify(users));
+localStorage.setItem(USERS, JSON.stringify(users));
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <AuthContextProvider>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <BooksList />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/bookdetails" element={<BookDetails />} />
-        </Routes>
-      </AuthContextProvider>
-    </BrowserRouter>
+    <AuthContextProvider>
+      <Router />
+    </AuthContextProvider>
   </React.StrictMode>
 );
