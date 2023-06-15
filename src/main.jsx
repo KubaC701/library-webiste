@@ -8,7 +8,9 @@ import Login from './components/login/Login';
 import BookDetails from './components/bookdetails/BookDetails';
 import BooksList from './components/BooksList/BooksList';
 import BookSearch from './components/BookSearch/BookSearch';
-import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import UsersHistory from './components/usershistory/UsersHistory';
+
+
 import { AuthContextProvider } from './contexts/AuthContext';
 import users from './data/users.json';
 
@@ -30,6 +32,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           />
           <Route path="/bookdetails" element={<BookDetails />} />
           <Route path="/booksearch" element={<BookSearch />} />
+          <Route path="/usershistory" element={<UsersHistory />} />
+
+
         </Routes>
       </AuthContextProvider>
     </BrowserRouter>
