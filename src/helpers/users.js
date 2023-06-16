@@ -1,27 +1,29 @@
+import { USERS } from '../constants/users';
+
 export const getUsers = () => {
-  return localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
+  return localStorage.getItem(USERS) ? JSON.parse(localStorage.getItem(USERS)) : [];
 };
 
 export const addUser = (user) => {
   const users = getUsers();
-  localStorage.setItem('users', JSON.stringify([...users, user]));
+  localStorage.setItem(USERS, JSON.stringify([...users, user]));
 };
 
-export const removeUser = (login) => {
+export const removeUser = (email) => {
   const users = getUsers();
-  localStorage.setItem('users', JSON.stringify(users.filter((user) => user.login !== login)));
+  localStorage.setItem(USERS, JSON.stringify(users.filter((user) => user.email !== email)));
 };
 
-export const authorizeUser = (login, password) => {
+export const authorizeUser = (email, password) => {
   const users = getUsers();
 
-  const isUserExists = users.some((user) => user.login === login && user.password === password);
+  const activeUser = users.find((user) => user.email === email && user.password === password);
 
-  if (isUserExists) {
-    localStorage.setItem('active-user', JSON.stringify({ login, password }));
+  if (activeUser) {
+    localStorage.setItem('active-user', JSON.stringify(activeUser));
   }
 
-  return isUserExists;
+  return activeUser;
 };
 
 export const logoutUser = () => {

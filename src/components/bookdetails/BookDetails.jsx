@@ -1,14 +1,15 @@
 import './bookdetails.css';
+import Layout from '../Layout/Layout';
 
 const BookDetails = () => {
   return (
-    <main className="container">
+    <Layout className="book-details">
       <div className="form-wrapper">
         <section>
-          <h1>Był sobie Gdańsk</h1>
-          <h2 className="middlecolor">Wojciech Duda, Grzegorz Fortuna, Donald Tusk</h2>
+          <h1 className="book-details__title">Był sobie Gdańsk</h1>
+          <h2 className="book-details__author">Wojciech Duda, Grzegorz Fortuna, Donald Tusk</h2>
         </section>
-        <img src="/book0001.jpg" alt="był sobie gdańsk" className="logo frame" />
+        <img src="/book0001.jpg" alt="był sobie gdańsk" className="book-details__cover" />
         <button type="submit" className="button">
           Reserve
         </button>
@@ -17,8 +18,8 @@ const BookDetails = () => {
           After reservation you’ll have 3 days to pick up you book from the library after this time
           your reservation will be cancelled
         </span>
-        <h2>Description</h2>
-        <div className="divdescription">
+        <h2 className="book-details__subheading">Description</h2>
+        <div className="book-details__description">
           <p>
             Na album &quot;Był sobie Gdańsk&quot; złożyły się zdjęcia z wielu zbiorów archiwalnych,
             muzealnych i prywatnych. Przejrzeliśmy ich tysiące. Naszym zamiarem było pokazanie
@@ -27,7 +28,7 @@ const BookDetails = () => {
           </p>
         </div>
       </div>
-    </main>
+    </Layout>
   );
 };
 

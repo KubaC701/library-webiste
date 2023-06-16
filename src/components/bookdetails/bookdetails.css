@@ -1,11 +1,21 @@
-h1 {
+.book-details {
+  padding: 16px 16px 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000000 25%, rgba(0, 0, 0, 10%) 100%), url('/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.book-details__title {
   color: #ffffff;
   font-weight: 600;
   font-size: 30px;
   margin-bottom: 15px;
 }
 
-h2 {
+.book-details__author,
+.book-details__subheading {
   font-size: 18px;
   color: #ffffff;
   display: block;
@@ -50,22 +60,13 @@ span {
   background-color: #d2782d;
 }
 
-.frame {
+.book-details__cover {
   border-style: groove;
   border-color: #5e5e5e;
   margin: auto;
   display: block;
   width: 50%;
   padding: 1%;
-}
-
-.container {
-  padding: 16px 16px 0;
-  min-height: 100vh;
-  background: linear-gradient(180deg, #000000 25%, rgba(0, 0, 0, 10%) 100%), url('/background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
 }
 
 .form-wrapper {
@@ -79,7 +80,7 @@ span {
   background-color: #000000;
 }
 
-.divdescription {
+.book-details__description {
   width: 100%;
   background-color: #242424;
   color: #fff;

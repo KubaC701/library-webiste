@@ -10,8 +10,11 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
+    "*.{js,jsx}": [
       "eslint --cache --fix --max-warnings=0",
+      "prettier --write"
+    ],
+    "*.css": [
       "prettier --write"
     ]
   },

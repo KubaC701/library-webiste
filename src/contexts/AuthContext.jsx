@@ -1,20 +1,21 @@
 import { createContext, useContext, useState } from 'react';
-import { authorizeUser, getActiveUser } from '../helpers/users';
+import { authorizeUser, getActiveUser, logoutUser } from '../helpers/users';
 
 const AuthContext = createContext(null);
 
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(getActiveUser());
 
-  const signIn = (newUser) => {
-    const isValidUser = authorizeUser(newUser.login, newUser.password);
-    setUser({ login: newUser.login, password: newUser.password });
+  const signIn = (credentials) => {
+    const user = authorizeUser(credentials.email, credentials.password);
+    setUser(user);
 
-    return isValidUser;
+    return !!user;
   };
 
   const signOut = () => {
     setUser(null);
+    logoutUser();
   };
 
   const value = { user, signIn, signOut };

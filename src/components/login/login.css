@@ -1,4 +1,4 @@
-.login__container {
+.login {
   padding: 16px 16px 0;
   min-height: 100vh;
   background: linear-gradient(180deg, #000000 25%, rgba(0, 0, 0, 10%) 100%), url('/background.png');

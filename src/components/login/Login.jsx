@@ -11,8 +11,8 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const { login, password } = event.target.elements;
-    const isValidUser = signIn({ login: login.value, password: password.value });
+    const { email, password } = event.target.elements;
+    const isValidUser = signIn({ email: email.value, password: password.value });
 
     if (isValidUser) {
       navigate('/', { replace: true });
@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <main className="login__container">
+    <main className="login">
       <div className="login__background-wrapper--desktop">
         <img src="/background.png" alt="" className="login__background--desktop" />
       </div>
@@ -35,10 +35,10 @@ const Login = () => {
           <img src="/logo.png" alt="Logo Motigu" className="login__logo" />
           <h1 className="login__title">Motigu</h1>
           <form onSubmit={handleSubmit} className="login__form">
-            <label className="login__label" htmlFor="login">
-              Login
+            <label className="login__label" htmlFor="email">
+              Email
             </label>
-            <input className="login__input input-login" type="text" name="login" id="login" />
+            <input className="login__input input-login" type="text" name="email" id="email" />
             <label className="login__label" htmlFor="password">
               Password
             </label>
