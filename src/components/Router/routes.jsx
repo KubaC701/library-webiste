@@ -1,4 +1,5 @@
 import BooksList from '../BooksList/BooksList';
+import BookDetails from '../BookDetails/BookDetails';
 import History from '../History/History';
 import ManageBooks from '../ManageBooks/ManageBooks';
 import ManageUsers from '../ManageUsers/ManageUsers';
@@ -13,6 +14,15 @@ export const ROUTES = [
     component: <BooksList />,
     isProtected: false,
   },
+
+  {
+    path: '/book/:id',
+    label: '',
+    roles: [],
+    component: <BookDetails />,
+    isProtected: false,
+  },
+
   {
     path: '/login',
     label: 'Login',
