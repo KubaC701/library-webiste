@@ -1,8 +1,9 @@
 import './bookdetails.css';
+import Layout from '../Layout/Layout';
 
 const BookDetails = () => {
   return (
-    <main className="book-details">
+    <Layout className="book-details">
       <div className="form-wrapper">
         <section>
           <h1 className="book-details__title">Był sobie Gdańsk</h1>
@@ -27,7 +28,7 @@ const BookDetails = () => {
           </p>
         </div>
       </div>
-    </main>
+    </Layout>
   );
 };
 

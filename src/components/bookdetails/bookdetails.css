@@ -14,7 +14,8 @@
   margin-bottom: 15px;
 }
 
-.book-details__author, .book-details__subheading {
+.book-details__author,
+.book-details__subheading {
   font-size: 18px;
   color: #ffffff;
   display: block;
