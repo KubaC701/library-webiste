@@ -1,24 +1,24 @@
-import './bookdetails.css';
+import './book-details.css';
 import Layout from '../Layout/Layout';
 
 const BookDetails = () => {
   return (
     <Layout className="book-details">
-      <div className="form-wrapper">
+      <div className="book-details__form-wrapper">
         <section>
           <h1 className="book-details__title">Był sobie Gdańsk</h1>
           <h2 className="book-details__author">Wojciech Duda, Grzegorz Fortuna, Donald Tusk</h2>
         </section>
         <img src="/book0001.jpg" alt="był sobie gdańsk" className="book-details__cover" />
-        <button type="submit" className="button">
+        <button type="submit" className="book-details__button">
           Reserve
         </button>
-        <span>
+        <span className="book-details__span">
           {' '}
           After reservation you’ll have 3 days to pick up you book from the library after this time
           your reservation will be cancelled
         </span>
-        <h2 className="book-details__subheading">Description</h2>
+        <h2 className="book-details__subheading book-details__h2">Description</h2>
         <div className="book-details__description">
           <p>
             Na album &quot;Był sobie Gdańsk&quot; złożyły się zdjęcia z wielu zbiorów archiwalnych,

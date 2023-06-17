@@ -23,12 +23,12 @@
   margin: 0 0 10px 0px;
 }
 
-p {
+.book-details__p {
   color: #ffffff;
   font-size: 12px;
 }
 
-span {
+.book-details__span {
   font-size: 12px;
   text-align: center;
   padding-top: 10px;
@@ -39,11 +39,11 @@ span {
   font-weight: 6;
 }
 
-.middlecolor {
+.book-details__middlecolor {
   color: #dad2c7;
 }
 
-.button {
+.book-details__button {
   background-color: #e3893e;
   transition: background-color 0.2s ease-in-out;
   border-radius: 8px;
@@ -55,7 +55,7 @@ span {
   font-size: 1.25rem;
 }
 
-.button:hover {
+.book-details__button:hover {
   cursor: pointer;
   background-color: #d2782d;
 }
@@ -69,7 +69,7 @@ span {
   padding: 1%;
 }
 
-.form-wrapper {
+.book-details__form-wrapper {
   flex: 60%;
   display: flex;
   flex-direction: column;
