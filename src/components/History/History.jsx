@@ -1,4 +1,5 @@
 import './history.css';
+import usershistory from '../../data/usershistory.json';
 import Layout from '../Layout/Layout';
 
 const History = () => {
@@ -11,29 +12,29 @@ const History = () => {
         </section>
 
         <div className="history__list">
-          <div className="history__item">
-            <div className="history_cover">
-              <img src="/book0001.jpg" alt="był sobie gdańsk" className="history__cover" />
+          {usershistory.map((borrowed) => (
+            <div className="history__item" key={`${borrowed.mail} ${borrowed.from} ${borrowed.to}`}>
+              <div className="history_cover">
+                <img src={borrowed.mail} alt={borrowed.mail} className="history__cover" />
+              </div>
+              <div className="history_cover">
+                <div className="history__line">
+                  <h3 className="history__h3">Title:</h3>
+                  <p className="history__p">{borrowed.mail}</p>
+                </div>
+                <div className="history__line">
+                  <h3 className="history__h3">Author:</h3>
+                  <p className="history__p"> {borrowed.mail}</p>
+                </div>
+                <div className="history__line">
+                  <h3 className="history__h3">From:</h3>
+                </div>
+                <div className="history__line">
+                  <h3 className="history__h3">To:</h3>
+                </div>
+              </div>
             </div>
-
-            <div className="history_cover">
-              <h3 className="history__h3">Title:</h3>
-              <h3 className="history__h3">Author:</h3>
-              <h3 className="history__h3">From:</h3>
-              <h3 className="history__h3">To:</h3>
-            </div>
-          </div>
-          <div className="history__item">
-            <div className="history_cover">
-              <img src="/book0001.jpg" alt="był sobie gdańsk" className="history__cover" />
-            </div>
-            <div className="history_cover">
-              <h3 className="history__h3">Title:</h3>
-              <h3 className="history__h3">Author:</h3>
-              <h3 className="history__h3">From:</h3>
-              <h3 className="history__h3">To:</h3>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </Layout>
