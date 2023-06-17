@@ -13,14 +13,14 @@ const History = () => {
 
         <div className="history__list">
           {usershistory.map((borrowed) => (
-            <div className="history__item" key={`${borrowed.mail} ${borrowed.from} ${borrowed.to}`}>
+            <div className="history__item" key={`${borrowed.from} ${borrowed.to} ${borrowed.to}`}>
               <div className="history_cover">
-                <img src={borrowed.mail} alt={borrowed.mail} className="history__cover" />
+                <img src={borrowed.mail} alt={borrowed.from} className="history__cover" />
               </div>
               <div className="history_cover">
                 <div className="history__line">
                   <h3 className="history__h3">Title:</h3>
-                  <p className="history__p">{borrowed.mail}</p>
+                  <p className="history__p">{borrowed.to}</p>
                 </div>
                 <div className="history__line">
                   <h3 className="history__h3">Author:</h3>
