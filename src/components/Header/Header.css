@@ -1,11 +1,15 @@
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+
   align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .header__menu {
-  position: relative;
+  width: 1fr;
+  justify-self: start;
+  margin-left: 10px;
 }
 
 .header__logo-wrapper {
@@ -13,10 +17,14 @@
   align-items: center;
   gap: 8px;
   text-decoration: none;
+  width: 1fr;
 }
 
 .header__logo {
+  background-color: aqua;
   height: 5rem;
+  display: block;
+  justify-content: center;
 }
 
 .header__heading {

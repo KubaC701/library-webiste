@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
 }
 
 .book-details__title {
@@ -14,7 +15,6 @@
   margin-bottom: 15px;
 }
 
-.book-details__author,
 .book-details__subheading {
   font-size: 18px;
   color: #ffffff;
@@ -23,13 +23,21 @@
   margin: 0 0 10px 0px;
 }
 
+.book-details__h2 {
+  font-size: 14px;
+  color: #ffffff;
+  display: block;
+  font-weight: 50;
+  margin: 0 0 10px 0px;
+}
+
 .book-details__p {
   color: #ffffff;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .book-details__span {
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 30px;
@@ -47,7 +55,7 @@
   background-color: #e3893e;
   transition: background-color 0.2s ease-in-out;
   border-radius: 8px;
-  padding: 12px;
+  padding: 5px;
   width: 100%;
   border: none;
   display: block;
@@ -61,12 +69,10 @@
 }
 
 .book-details__cover {
-  border-style: groove;
-  border-color: #5e5e5e;
   margin: auto;
   display: block;
   width: 50%;
-  padding: 1%;
+  padding: 5%;
 }
 
 .book-details__form-wrapper {

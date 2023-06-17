@@ -12,10 +12,12 @@ const Header = () => {
         <Hamburger isActive={isMenuActive} setIsActive={setIsMenuActive} />
         <Menu isActive={isMenuActive} setIsActive={setIsMenuActive} />
       </div>
-      <Link to="/" className="header__logo-wrapper">
-        <img src="/logo.png" alt="Motigu" className="header__logo" />
-        <h1 className="header__heading">Motigu</h1>
-      </Link>
+      <div>
+        <Link to="/" className="header__logo-wrapper">
+          <img src="/logo.png" alt="Motigu" className="header__logo" />
+          <h1 className="header__heading">Motigu</h1>
+        </Link>
+      </div>
     </header>
   );
 };
