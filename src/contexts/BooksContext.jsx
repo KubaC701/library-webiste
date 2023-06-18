@@ -1,0 +1,39 @@
+import { createContext, useContext, useEffect, useReducer } from 'react';
+
+import booksReducer from '../store/books/booksReducer';
+import booksLibrary from '../data/books.json';
+import { BOOKS, STATUSES } from '../constants/books';
+const BooksContext = createContext(null);
+
+const initialState = localStorage.getItem(BOOKS)
+  ? JSON.parse(localStorage.getItem(BOOKS))
+  : booksLibrary.map((book) => ({
+      ...book,
+      status: STATUSES.AVAILABLE,
+      reservation: null,
+      history: [],
+    }));
+
+export const BooksContextProvider = ({ children }) => {
+  const [books, dispatch] = useReducer(booksReducer, initialState);
+
+  const value = { books, dispatch };
+
+  useEffect(() => {
+    localStorage.setItem(BOOKS, JSON.stringify(books));
+  }, [books]);
+
+  return <BooksContext.Provider value={value}>{children}</BooksContext.Provider>;
+};
+
+const useBooksContext = () => {
+  const context = useContext(BooksContext);
+
+  if (context === undefined) {
+    throw new Error('useBooksContext must be used within a BooksContextProvider');
+  }
+
+  return context;
+};
+
+export default useBooksContext;
