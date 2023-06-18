@@ -1,13 +1,11 @@
 import './books-list.css';
 import books from '../../data/books.json';
+import Layout from '../Layout/Layout';
 
 const BookSearch = () => {
   return (
-    <main>
+    <Layout>
       <div className="booksearch__container">
-        <div>
-          <h1 className="booksearch__h1">logo&apos;s space</h1>
-        </div>
         <div className="booksearch__search">
           <input
             className="booksearch__input"
@@ -45,7 +43,7 @@ const BookSearch = () => {
           your reservation will be cancelled
         </span>
       </div>
-    </main>
+    </Layout>
   );
 };
 
