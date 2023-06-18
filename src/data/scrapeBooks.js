@@ -49,6 +49,7 @@ import fs from 'fs';
   }
 
   const books = titles.map((title, index) => ({
+    id: index + 1,
     title,
     url: urls[index],
     author: authors[index],
@@ -56,7 +57,7 @@ import fs from 'fs';
     thumbnail: thumbnails[index],
   }));
 
-  fs.writeFile('books.json', JSON.stringify(books), 'utf8', () => {});
+  fs.writeFile('src/data/books.json', JSON.stringify(books), 'utf8', () => {});
 
   await browser.close();
 })();
