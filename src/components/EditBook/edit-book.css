@@ -1,0 +1,68 @@
+.bookedition_container {
+  padding: 16px;
+  min-height: 10vh;
+  background: #000000;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.bookedition_h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.bookhistory_container {
+  padding: 16px;
+  min-height: 10vh;
+  background: #000000;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.bookhistory_h2 {
+  font-size: 20px;
+  color: white;
+}
+
+.bookaction_container {
+  padding: 16px;
+  background: #000000;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.bookedition_borrowed {
+  background-color: #e3893e;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 300px;
+  border: none;
+  margin-bottom: 16px;
+  margin-right: 10px;
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 200px;
+}
+
+.bookedition_delete {
+  background-color: black;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 300px;
+  border-color: white;
+  margin-bottom: 16px;
+  margin-right: 10px;
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 200px;
+}
