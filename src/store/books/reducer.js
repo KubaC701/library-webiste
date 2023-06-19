@@ -1,4 +1,4 @@
-import { ACTION_TYPES } from './booksActions';
+import { ACTION_TYPES } from './actions';
 
 const booksReducer = (state, action) => {
   const { type, payload } = action;

@@ -43,7 +43,6 @@ const setBookStatus = (book, user, status) => {
     },
   };
 };
-
 export const borrowBook = (book, user) => setBookStatus(book, user, STATUSES.BORROWED);
 export const reserveBook = (book, user) => setBookStatus(book, user, STATUSES.RESERVED);
 

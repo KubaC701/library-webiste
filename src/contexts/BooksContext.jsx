@@ -1,9 +1,10 @@
 import { createContext, useContext, useEffect, useReducer } from 'react';
 
-import booksReducer from '../store/books/booksReducer';
+import booksReducer from '../store/books/reducer';
 import booksLibrary from '../data/books.json';
 import { BOOKS, STATUSES } from '../constants/books';
-const BooksContext = createContext(null);
+
+const BooksContext = createContext({});
 
 const initialState = localStorage.getItem(BOOKS)
   ? JSON.parse(localStorage.getItem(BOOKS))
