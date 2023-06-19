@@ -1,3 +1,84 @@
-.user-item {
-  color: orange;
+.usersearch__h1 {
+  font-size: 16px;
+  color: #e3893e;
+  display: right;
+  font-weight: 200px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.usersearch__container {
+  padding: 16px;
+  min-height: 10vh;
+  background: #000000;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.usersearch__search {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.usersearch__input {
+  height: 16px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #242424;
+  color: #000000;
+  border-radius: 8px;
+  padding: 20px;
+  border: none;
+  margin-bottom: 8px;
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.usersearch__adduserbutton {
+  background-color: #e3893e;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 300px;
+  border: none;
+  margin-right: 10px;
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.manage-users_list {
+  padding: 16px 8px;
+  background-color: #242424;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.useritem {
+  padding: 4px 0;
+  color: white;
+  margin-right: auto;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.useritem:last-child {
+  border-bottom: none;
+}
+
+.useritem_delete {
+  background-color: #242424;
+  margin-left: auto;
+  border: none;
+  border-radius: 8px;
 }
