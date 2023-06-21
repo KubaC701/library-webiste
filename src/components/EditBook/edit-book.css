@@ -1,4 +1,4 @@
-.bookedition_container {
+.editbookedition_container {
   padding: 16px;
   min-height: 10vh;
   background: #000000;
@@ -8,13 +8,13 @@
   margin-left: auto;
 }
 
-.bookedition_h1 {
+.editbookedition_h1 {
   font-size: 24px;
-  color: white;
+  color: #e3893e;
 }
 
-.bookhistory_container {
-  padding: 16px;
+.editbookhistory_container {
+  padding: 16px 20px;
   min-height: 10vh;
   background: #000000;
   background-size: cover;
@@ -23,46 +23,45 @@
   margin-left: auto;
 }
 
-.bookhistory_h2 {
+.editbookhistory_h2 {
   font-size: 20px;
-  color: white;
+  color: #e3893e;
+  margin-bottom: 12px;
 }
 
-.bookaction_container {
+.editbookaction_container {
   padding: 16px;
   background: #000000;
   background-size: cover;
   display: flex;
-  flex-direction: row;
-  margin-left: auto;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.bookedition_borrowed {
+.editbookaction_borrowed {
   background-color: #e3893e;
   border-radius: 8px;
-  padding: 12px;
+  padding: 12px 12px;
   width: 100%;
   min-width: 100px;
   max-width: 300px;
   border: none;
   margin-bottom: 16px;
-  margin-right: 10px;
-  margin-left: auto;
   font-size: 14px;
-  font-weight: 200px;
+  font-weight: 200;
+  align-self: center;
 }
 
-.bookedition_delete {
+.editbookaction_delete {
   background-color: black;
   border-radius: 8px;
-  padding: 12px;
+  padding: 12px 12px;
   width: 100%;
   min-width: 100px;
   max-width: 300px;
-  border-color: white;
+  border-color: #e3893e;
   margin-bottom: 16px;
-  margin-right: 10px;
-  margin-left: auto;
   font-size: 14px;
-  font-weight: 200px;
+  font-weight: 200;
+  align-self: center;
 }

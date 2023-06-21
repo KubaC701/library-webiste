@@ -1,10 +1,10 @@
 import Layout from '../Layout/Layout';
-import './History.css';
-import BookEdition from './BookEdition';
-import BookHistory from './BookHistory';
-import BookAction from '../EditBook/BookAction';
+import './edit-book.css';
+import BookEdition from './EditBookEdition';
+import BookHistory from './EditBookHistory';
+import BookAction from './EditBookAction';
 
-const History = () => {
+const EditBook = () => {
   return (
     <Layout>
       <BookEdition />
@@ -14,4 +14,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default EditBook;
