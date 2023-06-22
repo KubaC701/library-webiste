@@ -1,40 +1,40 @@
-.usersearch__label {
+.user-search__label {
   margin-left: 4px;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 400;
 }
 
-.usersearch__container {
+.user-search__container {
   display: flex;
   flex-direction: column;
 }
 
-.usersearch__search {
-  margin: 10px 0;
+.user-search__search {
+  margin: 4px 0;
   width: 100%;
   max-width: 600px;
 }
 
-.usersearch__input {
+.user-search__input {
   height: 16px;
   width: 100%;
   max-width: 600px;
   background-color: #242424;
-  color: #000000;
+  color: var(--color-text);
   border-radius: 8px;
   padding: 20px;
   border: none;
 }
 
-.usersearch__adduserbutton {
+.user-search__adduserbutton {
   background-color: var(--color-primary);
   border-radius: 8px;
   padding: 12px;
   width: 100%;
   min-width: 50px;
   max-width: 150px;
-  margin-bottom: 24px;
+  margin: 20px 0 24px;
   border: none;
   font-size: 14px;
   font-weight: 700;
@@ -51,8 +51,6 @@
 .user-item {
   padding: 4px 0;
   color: white;
-  margin-right: auto;
-  margin-top: auto;
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-text);
