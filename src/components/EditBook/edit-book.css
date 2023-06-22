@@ -4,21 +4,10 @@
 }
 
 .edit-book-edition_h1 {
+  margin-left: 4px;
   font-size: 20px;
   margin-bottom: 16px;
   color: var(--color-primary);
-}
-
-.edit-book-history_container {
-  padding: 16px 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.edit-book-history_h2 {
-  font-size: 20px;
-  color: var(--color-primary);
-  margin-bottom: 16px;
 }
 
 .edit-book-action_container {
@@ -54,4 +43,34 @@
   font-size: 16px;
   font-weight: 700;
   align-self: center;
+}
+
+.edit-book-history_container {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-book-history_h2 {
+  margin-left: 4px;
+  font-size: 20px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.edit-book-history_info {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.edit-book-history_dates {
+  font-size: 14px;
+  color: blanchedalmond;
+  justify-self: flex-start;
+}
+
+.edit-book-history_names {
+  font-size: 14px;
+  color: blanchedalmond;
 }

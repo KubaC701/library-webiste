@@ -5,7 +5,7 @@ const EditBookEdition = () => {
         <div>
           <h1 className="edit-book-edition_h1">Edit book</h1>
         </div>
-        <p>...(miejsce na wybrany element książki)... </p>
+        <form></form>
       </div>
     </main>
   );
