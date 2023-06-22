@@ -2,7 +2,7 @@ const EditBookAction = () => {
   return (
     <main>
       <div className="edit-book-action_container">
-        <button type="active" className="edit-book-action_borrowed">
+        <button type="button" className="edit-book-action_borrowed">
           Mark as borrowed
         </button>
         <button

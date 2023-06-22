@@ -1,38 +1,28 @@
 .edit-book-edition_container {
-  padding: 16px;
-  min-height: 10vh;
-  background: #000000;
-  background-size: cover;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
 }
 
 .edit-book-edition_h1 {
-  font-size: 24px;
+  font-size: 20px;
+  margin-bottom: 16px;
   color: var(--color-primary);
 }
 
 .edit-book-history_container {
-  padding: 16px 20px;
-  min-height: 10vh;
-  background: #000000;
-  background-size: cover;
+  padding: 16px 0;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
 }
 
 .edit-book-history_h2 {
   font-size: 20px;
   color: var(--color-primary);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .edit-book-action_container {
   padding: 16px;
-  background: #000000;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,27 +31,27 @@
 .edit-book-action_borrowed {
   background-color: var(--color-primary);
   border-radius: 8px;
-  padding: 12px 12px;
+  padding: 12px;
   width: 100%;
   min-width: 100px;
   max-width: 300px;
   border: none;
   margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 16px;
+  font-weight: 700;
   align-self: center;
 }
 
 .edit-book-action_delete {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
   background-color: black;
   border-radius: 8px;
-  padding: 12px 12px;
+  padding: 12px;
   width: 100%;
   min-width: 100px;
   max-width: 300px;
-  border-color: var(--color-primary);
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 16px;
+  font-weight: 700;
   align-self: center;
 }
