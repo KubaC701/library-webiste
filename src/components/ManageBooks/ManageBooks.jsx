@@ -6,6 +6,8 @@ import { STATUSES } from '../../constants/books';
 
 import useSearch from '../../hooks/useSearch';
 
+const SHOW_ALL = 'SHOW_ALL';
+
 const ManageBooks = () => {
   const { books } = useBooksContext();
 
@@ -13,7 +15,16 @@ const ManageBooks = () => {
     data: filteredBooks,
     query,
     setQuery,
-  } = useSearch(books, (book) => [book.title, book.author, book.reservation?.user]);
+  } = useSearch(books, (book) => [book.title, book.author, book.reservation?.user, book.status]);
+
+  const handleSelectChange = (e) => {
+    const status = e.target.value;
+    if (status === SHOW_ALL) {
+      setQuery('');
+    } else {
+      setQuery(status);
+    }
+  };
 
   return (
     <Layout className="manage-books" noPadding>
@@ -25,13 +36,13 @@ const ManageBooks = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <select className="manage-books__select">
-          <option value="SHOW_ALL" className="manage-books__option">
+        <select className="manage-books__select" onChange={handleSelectChange}>
+          <option value={SHOW_ALL} className="manage-books__option">
             Show all
           </option>
           {Object.values(STATUSES).map((status) => (
             <option key={status} value={status} className="manage-books__option">
-              {status.toLocaleUpperCase()}
+              {status[0] + status.slice(1).toLowerCase()}
             </option>
           ))}
         </select>

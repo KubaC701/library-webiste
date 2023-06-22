@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ReservationActions from './ReservationActions';
 
 const ManageBooksItem = ({ book }) => {
   return (
@@ -17,13 +18,8 @@ const ManageBooksItem = ({ book }) => {
             <h3 className="manage-books-item__title">{book.title}</h3>
           </div>
         </div>
-        <div className="manage-books-item__actions">
-          <button className="manage-books-item__button">Mark as borrowed</button>
-          {book.reservation && (
-            <p className="manage-books-item__reservation">{book.reservation.user}</p>
-          )}
-        </div>
       </Link>
+      <ReservationActions book={book} />
     </li>
   );
 };
