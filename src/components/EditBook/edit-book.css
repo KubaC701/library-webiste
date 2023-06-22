@@ -10,6 +10,25 @@
   color: var(--color-primary);
 }
 
+.edit-book-edition_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-book-edition_save-changes {
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  min-width: 100px;
+  max-width: 300px;
+  border: none;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  justify-self: center;
+}
+
 .edit-book-action_container {
   padding: 16px;
   display: flex;
@@ -20,7 +39,7 @@
 .edit-book-action_borrowed {
   background-color: var(--color-primary);
   border-radius: 8px;
-  padding: 12px;
+  padding: 10px;
   width: 100%;
   min-width: 100px;
   max-width: 300px;
@@ -36,7 +55,7 @@
   border-color: var(--color-primary);
   background-color: black;
   border-radius: 8px;
-  padding: 12px;
+  padding: 10px;
   width: 100%;
   min-width: 100px;
   max-width: 300px;
@@ -46,13 +65,12 @@
 }
 
 .edit-book-history_container {
-  padding: 16px 0;
+  padding: 16px 16px;
   display: flex;
   flex-direction: column;
 }
 
 .edit-book-history_h2 {
-  margin-left: 4px;
   font-size: 20px;
   color: var(--color-primary);
   margin-bottom: 16px;

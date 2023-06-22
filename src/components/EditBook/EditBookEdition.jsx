@@ -5,7 +5,11 @@ const EditBookEdition = () => {
         <div>
           <h1 className="edit-book-edition_h1">Edit book</h1>
         </div>
-        <form></form>
+        <form className="edit-book-edition_form">
+          <button type="submit" className="edit-book-edition_save-changes">
+            Save changes
+          </button>
+        </form>
       </div>
     </main>
   );
