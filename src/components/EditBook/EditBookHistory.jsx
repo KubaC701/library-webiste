@@ -1,9 +1,9 @@
 const EditBookHistory = () => {
   return (
     <main>
-      <div className="editbookhistory_container">
+      <div className="edit-book-history_container">
         <div>
-          <h1 className="editbookhistory_h2">History</h1>
+          <h2 className="edit-book-history_h2">History</h2>
         </div>
         <p>
           12-03-2023 .......... Joe borrowed a book <br />

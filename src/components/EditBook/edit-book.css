@@ -1,4 +1,4 @@
-.editbookedition_container {
+.edit-book-edition_container {
   padding: 16px;
   min-height: 10vh;
   background: #000000;
@@ -8,12 +8,12 @@
   margin-left: auto;
 }
 
-.editbookedition_h1 {
+.edit-book-edition_h1 {
   font-size: 24px;
-  color: #e3893e;
+  color: var(--color-primary);
 }
 
-.editbookhistory_container {
+.edit-book-history_container {
   padding: 16px 20px;
   min-height: 10vh;
   background: #000000;
@@ -23,13 +23,13 @@
   margin-left: auto;
 }
 
-.editbookhistory_h2 {
+.edit-book-history_h2 {
   font-size: 20px;
-  color: #e3893e;
+  color: var(--color-primary);
   margin-bottom: 12px;
 }
 
-.editbookaction_container {
+.edit-book-action_container {
   padding: 16px;
   background: #000000;
   background-size: cover;
@@ -38,8 +38,8 @@
   justify-content: center;
 }
 
-.editbookaction_borrowed {
-  background-color: #e3893e;
+.edit-book-action_borrowed {
+  background-color: var(--color-primary);
   border-radius: 8px;
   padding: 12px 12px;
   width: 100%;
@@ -52,14 +52,14 @@
   align-self: center;
 }
 
-.editbookaction_delete {
+.edit-book-action_delete {
   background-color: black;
   border-radius: 8px;
   padding: 12px 12px;
   width: 100%;
   min-width: 100px;
   max-width: 300px;
-  border-color: #e3893e;
+  border-color: var(--color-primary);
   margin-bottom: 16px;
   font-size: 14px;
   font-weight: 200;
