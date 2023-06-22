@@ -13,7 +13,7 @@ const UserSearch = () => {
           placeholder="example@lib.com"
         />
       </div>
-      <button type="button" className="user-search__adduserbutton">
+      <button type="button" className="user-search__add-user-button">
         Add user
       </button>
     </div>

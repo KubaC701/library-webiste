@@ -27,7 +27,7 @@
   border: none;
 }
 
-.user-search__adduserbutton {
+.user-search__add-user-button {
   background-color: var(--color-primary);
   border-radius: 8px;
   padding: 12px;
