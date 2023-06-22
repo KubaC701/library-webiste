@@ -10,10 +10,10 @@ function UserItem({ user }) {
   };
   const icon = getIcon();
   return (
-    <li className="useritem">
+    <li className="user-item">
       <img src={`/icons/${icon}`} />
-      <p className="useritem__email">{user.email}</p>
-      <button type="active" className="useritem_delete">
+      <p className="user-item__email">{user.email}</p>
+      <button type="submit" className="user-item_delete">
         <img src={`/icons/recycle_bin.png`} />
       </button>
     </li>
