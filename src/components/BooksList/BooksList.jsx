@@ -1,8 +1,12 @@
 import './books-list.css';
-import books from '../../data/books.json';
+
 import Layout from '../Layout/Layout';
+import useBooksContext from '../../contexts/BooksContext';
+import BookItem from './BookItem';
 
 const BookSearch = () => {
+  const { books } = useBooksContext();
+
   return (
     <Layout>
       <div className="booksearch__container">
@@ -22,20 +26,7 @@ const BookSearch = () => {
 
         <div className="booksearch__items">
           {books.map((book) => (
-            <div className="booksearch__item" type="button" key={`${book.title} ${book.author}`}>
-              <div>
-                <img src={book.thumbnail} alt={book.title} className="booksearch__thumbnail" />
-              </div>
-              <div>
-                <h1 className="booksearch__h1">{book.title}</h1>
-                <h2 className="middlecolor booksearch__h2">{book.author}</h2>
-              </div>
-              <div>
-                <button type="submit" className="booksearch__button">
-                  Reserve
-                </button>
-              </div>
-            </div>
+            <BookItem key={book.id} book={book} />
           ))}
         </div>
         <span className="booksearch__span">
