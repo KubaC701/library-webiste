@@ -2,8 +2,7 @@
   display: grid;
 
   align-items: center;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 16px;
 }
 
 .header__menu {

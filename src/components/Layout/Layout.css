@@ -3,3 +3,11 @@
   max-width: 1440px;
   margin: auto;
 }
+
+.container--no-padding {
+  padding: 0;
+}
+
+.header--own-padding {
+  padding: 24px 16px 0;
+}
