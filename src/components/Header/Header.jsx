@@ -3,6 +3,7 @@ import Hamburger from './Hamburger';
 import './Header.css';
 import Menu from './Menu';
 import { Link } from 'react-router-dom';
+import Avatar from './Avatar';
 
 const Header = ({ className }) => {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -17,6 +18,9 @@ const Header = ({ className }) => {
           <img src="/logo.png" alt="Motigu" className="header__logo" />
           <h1 className="header__heading">Motigu</h1>
         </Link>
+      </div>
+      <div>
+        <Avatar />
       </div>
     </header>
   );

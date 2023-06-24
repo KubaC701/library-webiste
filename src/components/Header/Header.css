@@ -1,13 +1,12 @@
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
 .header__menu {
-  width: 1fr;
-  justify-self: start;
-  margin-left: 10px;
+  position: relative;
 }
 
 .header__logo-wrapper {
@@ -15,14 +14,13 @@
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  width: 1fr;
 }
 
 .header__logo {
-  background-color: aqua;
   height: 5rem;
-  display: block;
-  justify-content: center;
+}
+.header__icon {
+  height: 2rem;
 }
 
 .header__heading {

@@ -32,3 +32,13 @@ export const logoutUser = () => {
 
 export const getActiveUser = () =>
   localStorage.getItem('active-user') ? JSON.parse(localStorage.getItem('active-user')) : null;
+
+export const getIcon = (user) => {
+  if (user.role === 'admin') {
+    return '/icons/admin.png';
+  } else if (user.role === 'librarian') {
+    return '/icons/librarian.png';
+  } else {
+    return '/icons/customer.png';
+  }
+};
