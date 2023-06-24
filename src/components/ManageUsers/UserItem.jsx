@@ -13,7 +13,7 @@ function UserItem({ user }) {
     <li className="user-item">
       <img src={`/icons/${icon}`} />
       <p className="user-item__email">{user.email}</p>
-      <button type="submit" className="user-item_delete">
+      <button type="button" className="user-item_delete">
         <img src={`/icons/recycle_bin.png`} />
       </button>
     </li>
