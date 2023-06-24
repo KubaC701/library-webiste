@@ -5,3 +5,5 @@ export const STATUSES = {
 };
 
 export const BOOKS = 'books';
+
+export const HISTORY = 'history';
