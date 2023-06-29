@@ -38,8 +38,11 @@ const EditBookEdition = ({ currentBook }) => {
               />
             </div>
           </div>
-          <label htmlFor="description">Description</label>
+          <label className="edit-book-edition__description-label" htmlFor="description">
+            Description
+          </label>
           <textarea
+            className="edit-book-edition__description"
             name="Description"
             id="Description"
             value={description}

@@ -96,3 +96,18 @@
   max-width: 85px;
   height: auto;
 }
+
+.edit-book-edition__description-label {
+  color: var(--color-text);
+  margin-top: 8px;
+}
+
+.edit-book-edition__description {
+  background-color: var(--color-input);
+  color: var(--color-text);
+  border-radius: 8px;
+  display: flex;
+  min-width: 300px;
+  max-width: 500px;
+  margin-top: 8px;
+}
