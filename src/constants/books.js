@@ -5,3 +5,8 @@ export const STATUSES = {
 };
 
 export const BOOKS = 'books';
+
+export const THUMBNAIL_DIMENSIONS = {
+  WIDTH: 170,
+  HEIGHT: 243,
+};

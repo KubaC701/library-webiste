@@ -1,17 +1,15 @@
-.edit-book-edition_container {
-  display: flex;
+.edit-book-edition__container {
   flex-direction: column;
 }
 
-.edit-book-edition_h1 {
+.edit-book-edition__h1 {
   margin-left: 4px;
   font-size: 20px;
   margin-bottom: 16px;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
-.edit-book-edition_form {
-  display: flex;
+.edit-book-edition__form {
   flex-direction: column;
 }
 
@@ -31,7 +29,6 @@
 
 .edit-book-action_container {
   padding: 16px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
 }
@@ -70,25 +67,32 @@
   flex-direction: column;
 }
 
-.edit-book-history_h2 {
+.edit-book-history__h2 {
   font-size: 20px;
-  color: var(--color-primary);
+  color: var(--color-text);
   margin-bottom: 16px;
 }
 
-.edit-book-history_info {
+.edit-book-history__info {
   display: flex;
   flex-direction: row;
   gap: 50px;
 }
 
-.edit-book-history_dates {
+.edit-book-history__list {
+  list-style: none;
   font-size: 14px;
-  color: blanchedalmond;
+  color: var(--color-text);
   justify-self: flex-start;
 }
 
-.edit-book-history_names {
-  font-size: 14px;
-  color: blanchedalmond;
+.edit-book-edition__basic-info {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-book-edition__thumbnail {
+  margin-top: 20px;
+  max-width: 85px;
+  height: auto;
 }

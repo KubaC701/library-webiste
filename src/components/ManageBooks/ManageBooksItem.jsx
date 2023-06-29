@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import ReservationActions from './ReservationActions';
+import { THUMBNAIL_DIMENSIONS } from '../../constants/books';
 
 const ManageBooksItem = ({ book }) => {
   return (
@@ -10,8 +11,8 @@ const ManageBooksItem = ({ book }) => {
             src={book.thumbnail}
             alt={book.title}
             className="manage-books-item__thumbnail"
-            width={170}
-            height={243}
+            width={THUMBNAIL_DIMENSIONS.WIDTH}
+            height={THUMBNAIL_DIMENSIONS.HEIGHT}
           />
           <div>
             <h4 className="manage-books-item__author">{book.author}</h4>

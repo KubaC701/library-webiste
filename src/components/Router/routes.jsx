@@ -15,15 +15,6 @@ export const ROUTES = [
     component: <BooksList />,
     isProtected: false,
   },
-
-  {
-    path: '/book/:id',
-    label: '',
-    roles: [],
-    component: <BookDetails />,
-    isProtected: false,
-  },
-
   {
     path: '/login',
     label: 'Login',
@@ -39,14 +30,14 @@ export const ROUTES = [
     isProtected: true,
   },
   {
-    path: '/manage-books',
+    path: '/books',
     label: 'Manage books',
     roles: [ROLES.LIBRARIAN, ROLES.ADMIN],
     component: <ManageBooks />,
     isProtected: true,
   },
   {
-    path: '/manage-books/:id',
+    path: '/books/:id',
     label: '',
     roles: [ROLES.LIBRARIAN, ROLES.ADMIN],
     component: <EditBook />,
@@ -58,5 +49,12 @@ export const ROUTES = [
     roles: [ROLES.ADMIN],
     component: <ManageUsers />,
     isProtected: true,
+  },
+  {
+    path: '/book/:id',
+    label: '',
+    roles: [],
+    component: <BookDetails />,
+    isProtected: false,
   },
 ];

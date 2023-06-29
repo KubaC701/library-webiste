@@ -6,3 +6,8 @@
   padding: 16px;
   border: none;
 }
+
+.input__label {
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
