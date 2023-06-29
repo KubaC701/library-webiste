@@ -35,43 +35,41 @@ const History = () => {
 
   return (
     <Layout className="history__container" noPadding>
-      <div className="history__form-wrapper">
-        <section>
-          <h1 className="history__user-name history__h1">John Doe</h1>
-          <h2 className="history__h2">Your history</h2>
-        </section>
+      <section>
+        <h1 className="history__user-name history__h1">John Doe</h1>
+        <h2 className="history__h2">Your history</h2>
+      </section>
 
-        <div className="history__list">
-          {booksToDisplay.map((book) => (
-            <div className="history__item" key={book.id}>
-              <div className="history_cover">
-                <img src={book.thumbnail} alt={book.title} className="history__cover" />
+      <div className="history__list">
+        {booksToDisplay.map((book) => (
+          <div className="history__item" key={book.id}>
+            <div className="history_value">
+              <img src={book.thumbnail} alt={book.title} className="history__value" />
+            </div>
+            <div className="history_value">
+              <div className="history__line">
+                <h3 className="history__h3">Title:</h3>
+                <p className="history__p">{book.title}</p>
               </div>
-              <div className="history_cover">
-                <div className="history__line">
-                  <h3 className="history__h3">Title:</h3>
-                  <p className="history__p">{book.title}</p>
-                </div>
-                <div className="history__line">
-                  <h3 className="history__h3">Author:</h3>
-                  <p className="history__p"> {book.author}</p>
-                </div>
-                <div className="history__line">
-                  <h3 className="history__h3">From:</h3>
-                  <p className="history__p">{formatDate(book.from)}</p>
-                </div>
-                <div className="history__line">
-                  <h3 className="history__h3">To:</h3>
-                  <p className="history__p">{formatDate(book.to)}</p>
-                </div>
-                <div className="history__line">
-                  <h3 className="history__h3">Status:</h3>
-                  <p className="history__p">{setStatus(book)}</p>
-                </div>
+              <div className="history__line">
+                <h3 className="history__h3">Author:</h3>
+                <p className="history__p"> {book.author}</p>
+              </div>
+              <div className="history__line">
+                <h3 className="history__h3">From:</h3>
+                <p className="history__p">{formatDate(book.from)}</p>
+              </div>
+              <div className="history__line">
+                <h3 className="history__h3">To:</h3>
+                <p className="history__p">{formatDate(book.to)}</p>
+              </div>
+              <div className="history__line">
+                <h3 className="history__h3">Status:</h3>
+                <p className="history__p">{setStatus(book)}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </Layout>
   );

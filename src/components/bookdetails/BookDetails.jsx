@@ -7,7 +7,7 @@ const BookDetails = () => {
       <div className="book-details__form-wrapper">
         <section>
           <h1 className="book-details__title">Był sobie Gdańsk</h1>
-          <h2 className="book-details__h2">Wojciech Duda, Grzegorz Fortuna, Donald Tusk</h2>
+          <h2 className="book-details__author">Wojciech Duda, Grzegorz Fortuna, Donald Tusk</h2>
         </section>
         <img src="/book0001.jpg" alt="był sobie gdańsk" className="book-details__cover" />
         <button type="submit" className="book-details__button">
