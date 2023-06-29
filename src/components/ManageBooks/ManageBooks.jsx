@@ -5,6 +5,8 @@ import './ManageBooks.css';
 import { STATUSES } from '../../constants/books';
 
 import useSearch from '../../hooks/useSearch';
+import Select from '../Select/Select';
+import Input from '../Input/Input';
 
 const SHOW_ALL = 'SHOW_ALL';
 
@@ -26,26 +28,28 @@ const ManageBooks = () => {
     }
   };
 
+  const filterOptions = [
+    {
+      value: SHOW_ALL,
+      label: 'Show all',
+    },
+    ...Object.values(STATUSES).map((status) => ({
+      value: status,
+      label: status[0] + status.slice(1).toLowerCase(),
+    })),
+  ];
+
   return (
     <Layout className="manage-books" noPadding>
       <div className="manage-books__filters">
-        <input
+        <Input
           type="text"
           placeholder="Search by book name, author or user email"
           className="manage-books__search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <select className="manage-books__select" onChange={handleSelectChange}>
-          <option value={SHOW_ALL} className="manage-books__option">
-            Show all
-          </option>
-          {Object.values(STATUSES).map((status) => (
-            <option key={status} value={status} className="manage-books__option">
-              {status[0] + status.slice(1).toLowerCase()}
-            </option>
-          ))}
-        </select>
+        <Select options={filterOptions} onChange={handleSelectChange} />
       </div>
       <ul className="manage-books__list">
         {filteredBooks.map((book) => (

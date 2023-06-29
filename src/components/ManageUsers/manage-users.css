@@ -65,4 +65,15 @@
   margin-left: auto;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-user-modal__input {
+  min-width: 250px;
+}
+
+.add-user-modal__fields {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
 }
