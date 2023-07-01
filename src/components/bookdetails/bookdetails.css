@@ -23,12 +23,12 @@
   margin: 0 0 10px 0px;
 }
 
-p {
+.book-details__description {
   color: #ffffff;
   font-size: 12px;
 }
 
-span {
+.book-details__reservation {
   font-size: 12px;
   text-align: center;
   padding-top: 10px;

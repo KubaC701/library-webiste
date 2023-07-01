@@ -3,6 +3,8 @@
   --color-primary--darken: #af682d;
   --color-primary--lighten: #f79240;
 
+  --color-input: #242424;
   --color-background: #000;
   --color-text: #fff;
+  --color-error: #fa4646;
 }

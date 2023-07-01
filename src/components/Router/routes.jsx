@@ -5,6 +5,7 @@ import ManageBooks from '../ManageBooks/ManageBooks';
 import ManageUsers from '../ManageUsers/ManageUsers';
 import Login from '../Login/Login';
 import { ROLES } from '../../constants/users';
+import EditBook from '../EditBook/EditBook';
 
 export const ROUTES = [
   {
@@ -14,15 +15,6 @@ export const ROUTES = [
     component: <BooksList />,
     isProtected: false,
   },
-
-  {
-    path: '/book/:id',
-    label: '',
-    roles: [],
-    component: <BookDetails />,
-    isProtected: false,
-  },
-
   {
     path: '/login',
     label: 'Login',
@@ -45,10 +37,24 @@ export const ROUTES = [
     isProtected: true,
   },
   {
+    path: '/books/:id',
+    label: '',
+    roles: [ROLES.LIBRARIAN, ROLES.ADMIN],
+    component: <EditBook />,
+    isProtected: true,
+  },
+  {
     path: '/users',
     label: 'Manage users',
     roles: [ROLES.ADMIN],
     component: <ManageUsers />,
     isProtected: true,
+  },
+  {
+    path: '/book/:id',
+    label: '',
+    roles: [],
+    component: <BookDetails />,
+    isProtected: false,
   },
 ];
