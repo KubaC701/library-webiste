@@ -1,5 +1,5 @@
 .button {
-  background-color: #e3893e;
+  background-color: var(--color-primary);
   transition: background-color 0.2s ease-in-out;
   border-radius: 8px;
   padding: 12px 6px;
@@ -9,7 +9,17 @@
   margin-bottom: 8px;
 }
 
+.button--outline {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
 .button:hover {
   cursor: pointer;
-  background-color: #d2782d;
+  background-color: var(--color-primary--lighten);
+}
+
+.button--outline:hover {
+  background-color: #242424;
 }

@@ -42,7 +42,7 @@ const ManageUsers = () => {
           <UsersItem key={user.email} user={user} onDelete={handleDelete} />
         ))}
       </ul>
-      {isModalOpen && <AddUserModal onSubmit={handleAdd} />}
+      {isModalOpen && <AddUserModal onSubmit={handleAdd} setIsModalOpen={setIsModalOpen} />}
     </Layout>
   );
 };
