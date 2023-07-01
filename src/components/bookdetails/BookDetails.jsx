@@ -13,20 +13,17 @@ const BookDetails = () => {
         <button type="submit" className="button">
           Reserve
         </button>
-        <span>
+        <span className="book-details__reservation">
           {' '}
           After reservation you’ll have 3 days to pick up you book from the library after this time
           your reservation will be cancelled
         </span>
         <h2 className="book-details__subheading">Description</h2>
-        <div className="book-details__description">
-          <p>
-            Na album &quot;Był sobie Gdańsk&quot; złożyły się zdjęcia z wielu zbiorów archiwalnych,
-            muzealnych i prywatnych. Przejrzeliśmy ich tysiące. Naszym zamiarem było pokazanie
-            przede wszystkim tych fragmentów miasta, które zniknęły bezpowrotnie lub zmieniły swój
-            charakter.
-          </p>
-        </div>
+        <p className="book-details__description">
+          Na album &quot;Był sobie Gdańsk&quot; złożyły się zdjęcia z wielu zbiorów archiwalnych,
+          muzealnych i prywatnych. Przejrzeliśmy ich tysiące. Naszym zamiarem było pokazanie przede
+          wszystkim tych fragmentów miasta, które zniknęły bezpowrotnie lub zmieniły swój charakter.
+        </p>
       </div>
     </Layout>
   );

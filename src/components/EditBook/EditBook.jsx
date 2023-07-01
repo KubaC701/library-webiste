@@ -1,8 +1,8 @@
 import Layout from '../Layout/Layout';
 import './edit-book.css';
-import BookEdition from './EditBookEdition';
-import BookHistory from './EditBookHistory';
-import BookAction from './EditBookAction';
+import EditBookForm from './EditBookForm';
+import EditBookHistory from './EditBookHistory';
+import EditBookAction from './EditBookAction';
 import { useParams } from 'react-router-dom';
 import useBooksContext from '../../contexts/BooksContext';
 
@@ -13,9 +13,9 @@ const EditBook = () => {
 
   return (
     <Layout>
-      <BookEdition currentBook={currentBook} />
-      <BookHistory />
-      <BookAction />
+      <EditBookForm currentBook={currentBook} />
+      <EditBookHistory />
+      <EditBookAction />
     </Layout>
   );
 };

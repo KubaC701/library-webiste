@@ -11,7 +11,7 @@
 
 .button--outline {
   background-color: transparent;
-  border: 1px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
   color: var(--color-primary);
 }
 
@@ -22,4 +22,14 @@
 
 .button--outline:hover {
   background-color: #242424;
+}
+
+.button--dangerous:hover {
+  background-color: #260808;
+}
+
+.button--dangerous {
+  background-color: transparent;
+  color: var(--color-error);
+  border: 2px solid var(--color-error);
 }

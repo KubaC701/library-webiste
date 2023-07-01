@@ -17,7 +17,7 @@
 }
 
 .input__error {
-  color: #9e2626;
+  color: var(--color-error);
   font-size: 12px;
   margin-top: 4px;
   position: absolute;

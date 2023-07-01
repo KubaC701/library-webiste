@@ -1,12 +1,12 @@
+import Button from '../Button/Button';
+
 const EditBookAction = () => {
   return (
-    <div className="edit-book-action_container">
-      <button type="button" className="edit-book-action_borrowed">
-        Mark as borrowed
-      </button>
-      <button type="button-delete" className="edit-book-action_delete">
+    <div>
+      <Button type="button">Mark as borrowed</Button>
+      <Button type="button" variant="dangerous" className="edit-book-action__delete">
         Delete
-      </button>
+      </Button>
     </div>
   );
 };
