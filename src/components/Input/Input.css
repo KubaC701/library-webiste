@@ -1,4 +1,8 @@
 .input {
+  position: relative;
+}
+
+.input__field {
   width: 100%;
   background-color: var(--color-input);
   color: var(--color-text);
@@ -10,4 +14,13 @@
 .input__label {
   color: var(--color-text);
   margin-bottom: 4px;
+}
+
+.input__error {
+  color: #9e2626;
+  font-size: 12px;
+  margin-top: 4px;
+  position: absolute;
+  bottom: -16px;
+  left: 4px;
 }
