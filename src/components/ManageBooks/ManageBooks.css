@@ -8,25 +8,7 @@
 }
 
 .manage-books__search {
-  border: none;
-  border-radius: 8px;
-  padding: 12px 16px;
-  width: 100%;
   max-width: 300px;
-  font-weight: 400;
-  background-color: #242424;
-  color: var(--color-text);
-}
-
-.manage-books__select {
-  border: none;
-  border-radius: 8px;
-  padding: 12px;
-  width: 100%;
-  max-width: 150px;
-  font-weight: 400;
-  background-color: #242424;
-  color: white;
 }
 
 .manage-books__list {

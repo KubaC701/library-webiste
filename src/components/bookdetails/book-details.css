@@ -25,19 +25,15 @@
 
 .book-details__author {
   font-size: 14px;
-  color: #ffffff;
-  display: block;
-  font-weight: 50;
+}
+
+.book-details__description {
+  color: var(--color-text);
   margin: 0 0 10px 0px;
 }
 
-.book-details__p {
-  color: #ffffff;
-  font-size: 10px;
-}
-
-.book-details__span {
-  font-size: 10px;
+.book-details__reservation {
+  font-size: 12px;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 30px;

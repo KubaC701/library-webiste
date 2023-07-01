@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import useAuthContext from '../../contexts/AuthContext';
 import { reserveBook, returnBook } from '../../store/books/actions';
 import useBooksContext from '../../contexts/BooksContext';
-import { STATUSES } from '../../constants/books';
+import { STATUSES, THUMBNAIL_DIMENSIONS } from '../../constants/books';
 
 const BookItem = ({ book }) => {
   const { user } = useAuthContext();
@@ -41,8 +41,8 @@ const BookItem = ({ book }) => {
           src={book.thumbnail}
           alt={book.title}
           className="booksearch__thumbnail"
-          width={170}
-          height={243}
+          width={THUMBNAIL_DIMENSIONS.WIDTH}
+          height={THUMBNAIL_DIMENSIONS.HEIGHT}
         />
       </div>
       <div>

@@ -8,23 +8,7 @@
 .user-search__container {
   display: flex;
   flex-direction: column;
-}
-
-.user-search__search {
-  margin: 4px 0;
-  width: 100%;
   max-width: 600px;
-}
-
-.user-search__input {
-  height: 16px;
-  width: 100%;
-  max-width: 600px;
-  background-color: #242424;
-  color: var(--color-text);
-  border-radius: 8px;
-  padding: 20px;
-  border: none;
 }
 
 .user-search__add-user-button {
@@ -65,4 +49,25 @@
   margin-left: auto;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-user-modal__input {
+  min-width: 250px;
+  margin-bottom: 24px;
+}
+
+.add-user-modal__input--email {
+  margin-bottom: 0;
+}
+
+.add-user-modal__fields {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.add-user-modal__actions {
+  display: flex;
+  gap: 8px;
 }
