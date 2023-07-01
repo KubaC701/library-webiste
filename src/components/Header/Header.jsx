@@ -4,9 +4,11 @@ import './Header.css';
 import Menu from './Menu';
 import { Link } from 'react-router-dom';
 import Avatar from './Avatar';
+import useAuthContext from '../../contexts/AuthContext';
 
 const Header = ({ className }) => {
   const [isMenuActive, setIsMenuActive] = useState(false);
+  const { user } = useAuthContext();
   return (
     <header className={`header ${className || ''}`}>
       <div className="header__menu">
@@ -20,7 +22,13 @@ const Header = ({ className }) => {
         </Link>
       </div>
       <div>
-        <Avatar />
+        {user ? (
+          <Avatar />
+        ) : (
+          <Link to="/login" className="button header__sign-in">
+            Sign in
+          </Link>
+        )}
       </div>
     </header>
   );

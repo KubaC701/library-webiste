@@ -27,3 +27,9 @@
   text-transform: uppercase;
   color: var(--color-primary);
 }
+
+.header__sign-in {
+  color: var(--color-dark);
+  text-decoration: none;
+  padding: 8px 24px !important;
+}

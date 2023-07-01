@@ -3,6 +3,8 @@ import useAuthContext from '../../contexts/AuthContext';
 import { reserveBook, returnBook } from '../../store/books/actions';
 import useBooksContext from '../../contexts/BooksContext';
 import { STATUSES, THUMBNAIL_DIMENSIONS } from '../../constants/books';
+import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const BookItem = ({ book }) => {
   const { user } = useAuthContext();
@@ -29,13 +31,14 @@ const BookItem = ({ book }) => {
       }
       return { disabled: true, text: 'Reserved' };
     }
+    if (book.status === STATUSES.BORROWED) return { disabled: true, text: 'Borrowed' };
     return { disabled: false, text: 'Reserve', onClick: () => makeReservation(book) };
   };
 
   const { disabled, text, onClick } = getButtonState(book);
 
   return (
-    <div className="booksearch__item" type="button" key={`${book.title} ${book.author}`}>
+    <Link className="booksearch__item" to={`/book/${book.id}`} key={`${book.title} ${book.author}`}>
       <div>
         <img
           src={book.thumbnail}
@@ -50,11 +53,17 @@ const BookItem = ({ book }) => {
         <h2 className="middlecolor booksearch__h2">{book.author}</h2>
       </div>
       <div>
-        <button type="submit" className="booksearch__button" onClick={onClick} disabled={disabled}>
+        <Button
+          type="button"
+          size="small"
+          className="booksearch__button"
+          onClick={onClick}
+          disabled={disabled}
+        >
           {text}
-        </button>
+        </Button>
       </div>
-    </div>
+    </Link>
   );
 };
 

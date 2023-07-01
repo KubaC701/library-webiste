@@ -15,6 +15,10 @@
   color: var(--color-primary);
 }
 
+.button--small {
+  padding: 6px;
+}
+
 .button:hover {
   cursor: pointer;
   background-color: var(--color-primary--lighten);

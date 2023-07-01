@@ -1,15 +1,20 @@
 import './book-details.css';
 import Layout from '../Layout/Layout';
-
+import { useParams } from 'react-router-dom';
+import useBooksContext from '../../contexts/BooksContext';
 const BookDetails = () => {
+  const { id } = useParams();
+  const { books } = useBooksContext();
+  const currentBook = books.find((book) => book.id === parseInt(id));
+
   return (
     <Layout className="book-details">
       <div className="book-details__form-wrapper">
         <section>
-          <h1 className="book-details__title">Był sobie Gdańsk</h1>
-          <h2 className="book-details__author">Wojciech Duda, Grzegorz Fortuna, Donald Tusk</h2>
+          <h1 className="book-details__title">{currentBook.title}</h1>
+          <h2 className="book-details__author">{currentBook.author}</h2>
         </section>
-        <img src="/book0001.jpg" alt="był sobie gdańsk" className="book-details__cover" />
+        <img src={currentBook.thumbnail} alt={currentBook.title} className="book-details__cover" />
         <button type="submit" className="book-details__button">
           Reserve
         </button>
@@ -18,11 +23,7 @@ const BookDetails = () => {
           your reservation will be cancelled
         </span>
         <h2 className="book-details__subheading">Description</h2>
-        <p className="book-details__description">
-          Na album &quot;Był sobie Gdańsk&quot; złożyły się zdjęcia z wielu zbiorów archiwalnych,
-          muzealnych i prywatnych. Przejrzeliśmy ich tysiące. Naszym zamiarem było pokazanie przede
-          wszystkim tych fragmentów miasta, które zniknęły bezpowrotnie lub zmieniły swój charakter.
-        </p>
+        <p className="book-details__description">{currentBook.description}</p>
       </div>
     </Layout>
   );
