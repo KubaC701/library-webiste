@@ -1,10 +1,11 @@
 :root {
   --color-primary: #e3893e;
-  --color-primary--darken: #af682d;
+  --color-primary--darken: #875124;
   --color-primary--lighten: #f79240;
 
   --color-input: #242424;
   --color-background: #000;
   --color-text: #fff;
+  --color-text--accent: #d1d1d1;
   --color-error: #fa4646;
 }

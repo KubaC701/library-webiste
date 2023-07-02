@@ -59,6 +59,12 @@
   font-weight: 700;
 }
 
+.reservation-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .reservation-actions__button {
   font-size: 0.7rem;
   margin-bottom: 8px;
@@ -70,6 +76,11 @@
   font-weight: 700;
   display: block;
   margin-bottom: 16px;
+}
+
+.reservation-actions__reservation {
+  color: var(--color-text);
+  font-size: 12px;
 }
 
 .reservation-actions__input {

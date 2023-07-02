@@ -19,8 +19,34 @@
 .header__logo {
   height: 5rem;
 }
+.header__icon {
+  height: 2rem;
+}
 
 .header__heading {
   text-transform: uppercase;
   color: var(--color-primary);
+  display: none;
+}
+
+@media screen and (min-width: 380px) {
+  .header__heading {
+    display: block;
+  }
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu__sign-in {
+  color: var(--color-dark);
+  text-decoration: none;
+  padding: 8px 24px !important;
+}
+
+.user-menu__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

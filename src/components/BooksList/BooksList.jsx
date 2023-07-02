@@ -3,6 +3,7 @@ import './books-list.css';
 import Layout from '../Layout/Layout';
 import useBooksContext from '../../contexts/BooksContext';
 import BookItem from './BookItem';
+import Input from '../Input/Input';
 
 const BookSearch = () => {
   const { books } = useBooksContext();
@@ -10,20 +11,14 @@ const BookSearch = () => {
   return (
     <Layout>
       <div className="booksearch__container">
-        <div className="booksearch__search">
-          <input
-            className="booksearch__input"
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Book's title"
-          />
-
-          <button type="submit" className="booksearch__search-button">
-            Search
-          </button>
-        </div>
-
+        <Input
+          className="booksearch__input"
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Book's title or author"
+          label="Search"
+        />
         <div className="booksearch__items">
           {books.map((book) => (
             <BookItem key={book.id} book={book} />

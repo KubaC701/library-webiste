@@ -79,7 +79,7 @@
 }
 
 .edit-book-history__date {
-  color: #d1d1d1;
+  color: var(--color-text--accent);
   margin-right: 12px;
 }
 
