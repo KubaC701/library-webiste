@@ -1,17 +1,16 @@
 .booksearch__title {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: #ffffff;
   font-weight: 600;
-  margin-bottom: 5px;
-  margin-top: 15px;
-  text-align: left;
+  margin: 8px 0 4px;
+  display: block;
 }
 
 .booksearch__author {
-  font-size: 8px;
+  font-size: 0.8rem;
   color: #dad2c7;
   display: block;
-  font-weight: 50;
+  font-weight: 300;
 }
 
 .booksearch__input {
@@ -43,20 +42,20 @@
   width: 100%;
   background-color: var(--color-background--accent);
   color: #fff;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-
+  gap: 16px;
   border-style: groove;
   border-color: #8d6a28;
-  padding: 10px;
   position: relative;
 }
 
 .booksearch__link {
   text-decoration: none;
+  padding: 8px;
+  display: block;
 }
 
 .booksearch__link::after {
@@ -72,8 +71,11 @@
 }
 
 .booksearch__button {
-  margin-top: 8px;
   width: 100%;
   position: relative;
   z-index: 1;
+}
+
+.booksearch__button-wrapper {
+  padding: 8px;
 }
