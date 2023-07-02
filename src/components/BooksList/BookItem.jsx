@@ -1,45 +1,14 @@
-import { useNavigate } from 'react-router-dom';
-import useAuthContext from '../../contexts/AuthContext';
-import { reserveBook, returnBook } from '../../store/books/actions';
-import useBooksContext from '../../contexts/BooksContext';
-import { STATUSES, THUMBNAIL_DIMENSIONS } from '../../constants/books';
+import { THUMBNAIL_DIMENSIONS } from '../../constants/books';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
+import useReservationButton from '../../hooks/useReservationButton';
 
 const BookItem = ({ book }) => {
-  const { user } = useAuthContext();
-  const navigate = useNavigate();
-  const { dispatch } = useBooksContext();
-
-  const makeReservation = (book) => {
-    if (!user) navigate('/login');
-    dispatch(reserveBook(book, user.email));
-  };
-
-  const cancelReservation = (book) => {
-    dispatch(returnBook(book, user.email));
-  };
-
-  const getButtonState = (book) => {
-    if (book.status === STATUSES.RESERVED) {
-      if (book.reservation?.user === user?.email) {
-        return {
-          disabled: false,
-          text: 'Cancel reservation',
-          onClick: () => cancelReservation(book),
-        };
-      }
-      return { disabled: true, text: 'Reserved' };
-    }
-    if (book.status === STATUSES.BORROWED) return { disabled: true, text: 'Borrowed' };
-    return { disabled: false, text: 'Reserve', onClick: () => makeReservation(book) };
-  };
-
-  const { disabled, text, onClick } = getButtonState(book);
+  const { onClick, disabled, text } = useReservationButton(book);
 
   return (
-    <Link className="booksearch__item" to={`/book/${book.id}`} key={`${book.title} ${book.author}`}>
-      <div>
+    <li className="booksearch__item" key={`${book.title} ${book.author}`}>
+      <div className="booksearch__info">
         <img
           src={book.thumbnail}
           alt={book.title}
@@ -47,12 +16,12 @@ const BookItem = ({ book }) => {
           width={THUMBNAIL_DIMENSIONS.WIDTH}
           height={THUMBNAIL_DIMENSIONS.HEIGHT}
         />
+        <Link to={`/books/${book.id}`} className="booksearch__link">
+          <span className="booksearch__title">{book.title}</span>
+          <span className=" booksearch__author">{book.author}</span>
+        </Link>
       </div>
-      <div>
-        <h1 className="booksearch__h1">{book.title}</h1>
-        <h2 className="middlecolor booksearch__h2">{book.author}</h2>
-      </div>
-      <div>
+      <div className="booksearch__button-wrapper">
         <Button
           type="button"
           size="small"
@@ -63,7 +32,7 @@ const BookItem = ({ book }) => {
           {text}
         </Button>
       </div>
-    </Link>
+    </li>
   );
 };
 

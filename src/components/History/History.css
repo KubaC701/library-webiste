@@ -46,7 +46,7 @@
 }
 
 .history-item:nth-child(odd) {
-  background-color: #242424;
+  background-color: var(--color-background--accent);
 }
 
 .history__list {
