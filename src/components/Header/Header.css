@@ -26,10 +26,27 @@
 .header__heading {
   text-transform: uppercase;
   color: var(--color-primary);
+  display: none;
 }
 
-.header__sign-in {
+@media screen and (min-width: 380px) {
+  .header__heading {
+    display: block;
+  }
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu__sign-in {
   color: var(--color-dark);
   text-decoration: none;
   padding: 8px 24px !important;
+}
+
+.user-menu__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

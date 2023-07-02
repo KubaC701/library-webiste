@@ -13,7 +13,8 @@
 
 .input__label {
   color: var(--color-text);
-  margin-bottom: 4px;
+  margin: 0 0 4px 4px;
+  display: block;
 }
 
 .input__error {

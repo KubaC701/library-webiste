@@ -6,8 +6,9 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: #000;
+  background-color: var(--color-background);
   font-family: 'Inter', sans-serif;
+  color: var(--color-text);
 }
 
 *,

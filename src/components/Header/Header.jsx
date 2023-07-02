@@ -3,12 +3,12 @@ import Hamburger from './Hamburger';
 import './Header.css';
 import Menu from './Menu';
 import { Link } from 'react-router-dom';
-import Avatar from './Avatar';
-import useAuthContext from '../../contexts/AuthContext';
+import UserMenu from './UserMenu';
 
 const Header = ({ className }) => {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const { user } = useAuthContext();
+  const [isUserMenuActive, setIsUserMenuActive] = useState(false);
+
   return (
     <header className={`header ${className || ''}`}>
       <div className="header__menu">
@@ -21,15 +21,7 @@ const Header = ({ className }) => {
           <h1 className="header__heading">Motigu</h1>
         </Link>
       </div>
-      <div>
-        {user ? (
-          <Avatar />
-        ) : (
-          <Link to="/login" className="button header__sign-in">
-            Sign in
-          </Link>
-        )}
-      </div>
+      <UserMenu isActive={isUserMenuActive} setIsActive={setIsUserMenuActive} />
     </header>
   );
 };

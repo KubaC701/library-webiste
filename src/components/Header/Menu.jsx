@@ -5,18 +5,13 @@ import './Menu.css';
 import { ROUTES } from '../Router/routes';
 
 const Menu = ({ isActive, setIsActive }) => {
-  const { user, signOut } = useAuthContext();
+  const { user } = useAuthContext();
 
   const shouldHideLogin = (route) => route.label !== 'Login' || !user;
 
   const routesToDisplay = ROUTES.filter(
     (route) => shouldHideLogin(route) && (!route.isProtected || route.roles.includes(user?.role))
   );
-
-  const handleSignOut = () => {
-    signOut();
-    setIsActive(false);
-  };
 
   return (
     <nav className={`menu ${isActive ? 'menu--active' : ''}`}>
@@ -28,13 +23,6 @@ const Menu = ({ isActive, setIsActive }) => {
             </Link>
           </li>
         ))}
-        <li>
-          {user && (
-            <button className="menu__button" onClick={handleSignOut}>
-              Sign out
-            </button>
-          )}
-        </li>
       </ul>
     </nav>
   );

@@ -1,9 +1,6 @@
-import useAuthContext from '../../contexts/AuthContext';
 import { getIcon } from '../../helpers/users';
 
-const Avatar = () => {
-  const { user } = useAuthContext();
-
+const Avatar = ({ user }) => {
   if (!user) return null;
 
   const icon = getIcon(user);

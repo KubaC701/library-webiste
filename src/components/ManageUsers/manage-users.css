@@ -65,6 +65,7 @@
   display: flex;
   gap: 16px;
   margin-bottom: 24px;
+  align-items: flex-end;
 }
 
 .add-user-modal__actions {

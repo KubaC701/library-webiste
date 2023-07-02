@@ -10,6 +10,11 @@
   z-index: 1;
 }
 
+.menu--user {
+  left: unset;
+  right: 0;
+}
+
 .menu__list {
   list-style: none;
 }
