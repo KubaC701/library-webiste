@@ -29,7 +29,7 @@
   display: none;
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 430px) {
   .header__heading {
     display: block;
   }
@@ -40,7 +40,6 @@
 }
 
 .user-menu__sign-in {
-  color: var(--color-dark);
   text-decoration: none;
   padding: 8px 24px !important;
 }

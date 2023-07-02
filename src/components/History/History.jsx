@@ -6,6 +6,7 @@ import { HISTORY } from '../../constants/books';
 
 import { Link } from 'react-router-dom';
 import HistoryItem from './HistoryItem';
+import { findById } from '../../helpers/books';
 
 const History = () => {
   const historyData = JSON.parse(localStorage.getItem(HISTORY));
@@ -16,7 +17,7 @@ const History = () => {
 
   const booksToDisplay = userHistory
     ? Object.entries(userHistory).map(([id, history]) => {
-        const book = books.find((bookData) => bookData.id === parseInt(id, 10));
+        const book = findById(id, books);
         return {
           ...history,
           ...book,

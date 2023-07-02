@@ -2,6 +2,8 @@ import { STATUSES } from '../../constants/books';
 import { addDays } from '../../helpers/date';
 import { saveActionToHistory } from '../../helpers/history';
 
+import { v4 as uuid } from 'uuid';
+
 export const ACTION_TYPES = {
   ADD_BOOK: 'ADD_BOOK',
   REMOVE_BOOK: 'REMOVE_BOOK',
@@ -10,7 +12,7 @@ export const ACTION_TYPES = {
 
 export const addBook = (book) => ({
   type: ACTION_TYPES.ADD_BOOK,
-  payload: book,
+  payload: { id: uuid(), ...book },
 });
 
 export const removeBook = (book) => ({
