@@ -21,42 +21,13 @@
   font-size: 3rem;
 }
 
-.login__label {
-  color: #e3893e;
-  display: block;
-  font-weight: 600;
-  margin: 0 0 4px 8px;
-}
-
-.login__input {
-  width: 100%;
-  background-color: #242424;
-  color: #fff;
-  border-radius: 8px;
-  padding: 16px;
-  border: none;
-}
-
-.login__input-login {
+.login__input--email {
   margin-bottom: 16px;
 }
 
 .login__button {
-  background-color: #e3893e;
-  transition: background-color 0.2s ease-in-out;
-  border-radius: 8px;
-  padding: 12px;
-  min-width: 150px;
-  border: none;
   margin: 32px auto 0;
   display: block;
-  font-weight: 700;
-  font-size: 1.25rem;
-}
-
-.login__button:hover {
-  cursor: pointer;
-  background-color: #d2782d;
 }
 
 .login__background {
