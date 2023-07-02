@@ -4,9 +4,15 @@ import Layout from '../Layout/Layout';
 import useBooksContext from '../../contexts/BooksContext';
 import BookItem from './BookItem';
 import Input from '../Input/Input';
+import useSearch from '../../hooks/useSearch';
 
 const BookSearch = () => {
   const { books } = useBooksContext();
+  const {
+    data: filteredBooks,
+    query,
+    setQuery,
+  } = useSearch(books, (book) => [book.title, book.author]);
 
   return (
     <Layout>
@@ -17,17 +23,14 @@ const BookSearch = () => {
           name="search"
           id="search"
           placeholder="Book's title or author"
-          label="Search"
+          query={query}
+          onChange={(event) => setQuery(event.target.value)}
         />
-        <div className="booksearch__items">
-          {books.map((book) => (
+        <ul className="booksearch__items">
+          {filteredBooks.map((book) => (
             <BookItem key={book.id} book={book} />
           ))}
-        </div>
-        <span className="booksearch__span">
-          After reservation you’ll have 3 days to pick up you book from the library after this time
-          your reservation will be cancelled
-        </span>
+        </ul>
       </div>
     </Layout>
   );

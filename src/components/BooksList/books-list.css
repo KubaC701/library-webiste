@@ -1,4 +1,4 @@
-.booksearch__h1 {
+.booksearch__title {
   font-size: 12px;
   color: #ffffff;
   font-weight: 600;
@@ -7,36 +7,15 @@
   text-align: left;
 }
 
-.booksearch__h2 {
+.booksearch__author {
   font-size: 8px;
   color: #dad2c7;
   display: block;
   font-weight: 50;
 }
 
-.booksearch__span {
-  font-size: 12px;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
-  color: #5e5e5e;
-  font-weight: 6;
-}
-
-.booksearch__backgroundandscroll {
-  overflow: auto;
-
-  /*background-repeat: no-repeat;*/
-  background-repeat: repeat;
-  background-size: 15%;
-
-  display: flex;
-}
-
 .booksearch__input {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .booksearch__container {
@@ -55,16 +34,15 @@
 
 .booksearch__items {
   display: grid;
-  max-width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 8px;
+  list-style: none;
 }
 
 .booksearch__item {
   width: 100%;
-  background-color: #242424;
+  background-color: var(--color-background--accent);
   color: #fff;
-  border: none;
 
   display: flex;
   flex-direction: column;
@@ -74,7 +52,18 @@
   border-style: groove;
   border-color: #8d6a28;
   padding: 10px;
+  position: relative;
+}
+
+.booksearch__link {
   text-decoration: none;
+}
+
+.booksearch__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 .booksearch__thumbnail {
@@ -85,9 +74,6 @@
 .booksearch__button {
   margin-top: 8px;
   width: 100%;
-}
-
-.booksearch__button:disabled {
-  pointer-events: none;
-  background-color: var(--color-primary--darken);
+  position: relative;
+  z-index: 1;
 }

@@ -1,46 +1,27 @@
-.book-details {
-  padding: 16px 16px 0;
-  min-height: 100vh;
-  background: linear-gradient(180deg, #000000 25%, rgba(0, 0, 0, 10%) 100%), url('/background.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-}
-
 .book-details__title {
   color: #ffffff;
   font-weight: 600;
-  font-size: 26px;
-  margin-bottom: 15px;
-}
-
-.book-details__subheading {
-  font-size: 18px;
-  color: #ffffff;
-  display: block;
-  font-weight: 50;
-  margin: 0 0 10px 0px;
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
 .book-details__author {
-  font-size: 14px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 16px;
 }
 
-.book-details__description {
-  color: var(--color-text);
-  margin: 0 0 10px 0px;
+.book-details__subheading {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1rem;
 }
 
 .book-details__reservation {
   font-size: 12px;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
-  color: #5e5e5e;
-  font-weight: 6;
+  color: var(--color-text--accent);
+  margin-bottom: 32px;
 }
 
 .book-details__middlecolor {
@@ -48,45 +29,32 @@
 }
 
 .book-details__button {
-  background-color: #e3893e;
-  transition: background-color 0.2s ease-in-out;
-  border-radius: 8px;
-  padding: 5px;
   width: 100%;
-  border: none;
-  display: block;
-  font-weight: 700;
-  font-size: 1.25rem;
+  margin-bottom: 8px;
 }
 
-.book-details__button:hover {
-  cursor: pointer;
-  background-color: #d2782d;
+.book-details__info {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
 .book-details__cover {
   display: block;
-  width: 50%;
-  margin: 24px auto;
+  /* margin: 24px auto; */
+  flex: 1;
+  object-fit: contain;
 }
 
-.book-details__form-wrapper {
-  flex: 60%;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  justify-content: center;
-  max-width: 500px;
-  margin: auto;
-  background-color: #000000;
+.book-details__description-wrapper {
+  flex: 1 1 500px;
 }
 
 .book-details__description {
-  width: 100%;
-  background-color: #242424;
-  color: #fff;
+  background-color: var(--color-background--accent);
   border-radius: 8px;
   padding: 16px;
-  border: none;
   text-align: justify;
 }

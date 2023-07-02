@@ -27,7 +27,7 @@
 
 .manage-users_list {
   padding: 16px 8px;
-  background-color: #242424;
+  background-color: var(--color-background--accent);
   border-radius: 8px;
   list-style: none;
 }
@@ -45,7 +45,7 @@
 }
 
 .user-item_delete {
-  background-color: #242424;
+  background-color: var(--color-background--accent);
   margin-left: auto;
   border: none;
   border-radius: 8px;
