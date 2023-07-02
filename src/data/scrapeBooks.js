@@ -49,7 +49,6 @@ import fs from 'fs';
   }
 
   const books = titles.map((title, index) => ({
-    id: index + 1,
     title,
     url: urls[index],
     author: authors[index],

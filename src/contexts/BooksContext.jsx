@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from 'react';
+import { v4 as uuid } from 'uuid';
 
 import booksReducer from '../store/books/reducer';
 import booksLibrary from '../data/books.json';
@@ -13,6 +14,7 @@ const initialState = localStorage.getItem(BOOKS)
       status: STATUSES.AVAILABLE,
       reservation: null,
       history: [],
+      id: uuid(),
     }));
 
 export const BooksContextProvider = ({ children }) => {

@@ -2,10 +2,12 @@ import './book-details.css';
 import Layout from '../Layout/Layout';
 import { useParams } from 'react-router-dom';
 import useBooksContext from '../../contexts/BooksContext';
+import { findById } from '../../helpers/books';
+
 const BookDetails = () => {
   const { id } = useParams();
   const { books } = useBooksContext();
-  const currentBook = books.find((book) => book.id === parseInt(id));
+  const currentBook = findById(id, books);
 
   return (
     <Layout className="book-details">

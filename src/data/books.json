@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "Nic tylko pył",
     "url": "https://lubimyczytac.pl/ksiazka/5064539/nic-tylko-pyl",
     "author": "Shaun David Hutchinson",
@@ -8,7 +7,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5064000/5064539/1063384-170x243.jpg"
   },
   {
-    "id": 2,
     "title": "Gleba",
     "url": "https://lubimyczytac.pl/ksiazka/5070175/gleba",
     "author": "Michał Śmielak",
@@ -16,7 +14,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5070000/5070175/1073009-170x243.jpg"
   },
   {
-    "id": 3,
     "title": "Rozmowy z Hitlerem",
     "url": "https://lubimyczytac.pl/ksiazka/5073039/rozmowy-z-hitlerem",
     "author": "Hermann Rauschning",
@@ -24,7 +21,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5073000/5073039/1077563-170x243.jpg"
   },
   {
-    "id": 4,
     "title": "Drzewo tańca",
     "url": "https://lubimyczytac.pl/ksiazka/5065339/drzewo-tanca",
     "author": "Kiran Millwood Hargrave",
@@ -32,7 +28,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5065000/5065339/1064731-170x243.jpg"
   },
   {
-    "id": 5,
     "title": "Barbarossa: Jak Hitler przegrał wojnę",
     "url": "https://lubimyczytac.pl/ksiazka/5064019/barbarossa-jak-hitler-przegral-wojne",
     "author": "Jonathan Dimbleby",
@@ -40,7 +35,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5064000/5064019/1062447-170x243.jpg"
   },
   {
-    "id": 6,
     "title": "Przerzut",
     "url": "https://lubimyczytac.pl/ksiazka/5071526/przerzut",
     "author": "Phil Klay",
@@ -48,7 +42,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5071000/5071526/1074988-170x243.jpg"
   },
   {
-    "id": 7,
     "title": "Krwawe kimchi - Zemsta jest kobietą - Zemsta i Partnerzy (6)",
     "url": "https://lubimyczytac.pl/ksiazka/5065445/krwawe-kimchi---zemsta-jest-kobieta---zemsta-i-partnerzy-6",
     "author": "Robert Ostaszewski",
@@ -56,7 +49,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5065000/5065445/1064921-170x243.jpg"
   },
   {
-    "id": 8,
     "title": "Wybrane zagadnienia kształtowania narzędzi chirurgicznych",
     "url": "https://lubimyczytac.pl/ksiazka/5070448/wybrane-zagadnienia-ksztaltowania-narzedzi-chirurgicznych",
     "author": "Marcin Dyner",
@@ -64,7 +56,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5070000/5070448/1073183-170x243.jpg"
   },
   {
-    "id": 9,
     "title": "Frunąc",
     "url": "https://lubimyczytac.pl/ksiazka/5071980/frunac",
     "author": "Teresa Smurzyńska",
@@ -72,7 +63,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5071000/5071980/1075713-170x243.jpg"
   },
   {
-    "id": 10,
     "title": "Ironia finansjalizacji. Przemiany świata społecznego w XXI wieku z perspektywy ekonomii i socjologii finansów",
     "url": "https://lubimyczytac.pl/ksiazka/5071974/ironia-finansjalizacji-przemiany-swiata-spolecznego-w-xxi-wieku-z-perspektywy-ekonomii-i-s",
     "author": "Wiesław Gumuła",
@@ -80,7 +70,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5071000/5071974/1075703-170x243.jpg"
   },
   {
-    "id": 11,
     "title": "Stella Maris",
     "url": "https://lubimyczytac.pl/ksiazka/5053403/stella-maris",
     "author": "Cormac McCarthy",
@@ -88,7 +77,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5053000/5053403/1072850-170x243.jpg"
   },
   {
-    "id": 12,
     "title": "Piękni i przeklęci",
     "url": "https://lubimyczytac.pl/ksiazka/5066016/piekni-i-przekleci",
     "author": "F. Scott Fitzgerald",
@@ -96,7 +84,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5066000/5066016/1065909-170x243.jpg"
   },
   {
-    "id": 13,
     "title": "Żegnaj, Eri",
     "url": "https://lubimyczytac.pl/ksiazka/5067323/zegnaj-eri",
     "author": "Tatsuki Fujimoto",
@@ -104,7 +91,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5067000/5067323/1068303-170x243.jpg"
   },
   {
-    "id": 14,
     "title": "Marzenie o pięknie. Jak Estée Lauder zbudowała imperium i stała się legendą",
     "url": "https://lubimyczytac.pl/ksiazka/5070981/marzenie-o-pieknie-jak-estee-lauder-zbudowala-imperium-i-stala-sie-legenda",
     "author": "Laura Baldini",
@@ -112,7 +98,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5070000/5070981/1074000-170x243.jpg"
   },
   {
-    "id": 15,
     "title": "Fragmenta",
     "url": "https://lubimyczytac.pl/ksiazka/5073761/fragmenta",
     "author": "Jan Kochanowski",
@@ -120,7 +105,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5073000/5073761/1078730-170x243.jpg"
   },
   {
-    "id": 16,
     "title": "Miraculous: Biedronka i Czarny Kot #1",
     "url": "https://lubimyczytac.pl/ksiazka/5064041/miraculous-biedronka-i-czarny-kot-1",
     "author": "Koma Warita, Riku Tsuchida",
@@ -128,7 +112,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5064000/5064041/1076102-170x243.jpg"
   },
   {
-    "id": 17,
     "title": "Jedną nogą w grobie",
     "url": "https://lubimyczytac.pl/ksiazka/5073817/jedna-noga-w-grobie",
     "author": "Sławomir Zajączkowski, Krzysztof Burdon",
@@ -136,7 +119,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5073000/5073817/1078839-170x243.jpg"
   },
   {
-    "id": 18,
     "title": "Międzygatunkowi recenzenci #1",
     "url": "https://lubimyczytac.pl/ksiazka/5072215/miedzygatunkowi-recenzenci-1",
     "author": "Amahara,  masha",
@@ -144,7 +126,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5072000/5072215/1076097-170x243.jpg"
   },
   {
-    "id": 19,
     "title": "BOSKI NERON",
     "url": "https://lubimyczytac.pl/ksiazka/5073910/boski-neron",
     "author": "Zenon Gołaszewski",
@@ -152,7 +133,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5073000/5073910/1079008-170x243.jpg"
   },
   {
-    "id": 20,
     "title": "Niewidzialny",
     "url": "https://lubimyczytac.pl/ksiazka/5066083/niewidzialny",
     "author": "Mari Jungstedt",
@@ -160,7 +140,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5066000/5066083/1066038-170x243.jpg"
   },
   {
-    "id": 21,
     "title": "Córka z Kuby",
     "url": "https://lubimyczytac.pl/ksiazka/5057847/corka-z-kuby",
     "author": "Soraya Lane",
@@ -168,7 +147,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5057000/5057847/1051233-170x243.jpg"
   },
   {
-    "id": 22,
     "title": "Falls Boys",
     "url": "https://lubimyczytac.pl/ksiazka/5068998/falls-boys",
     "author": "Penelope Douglas",
@@ -176,7 +154,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5068000/5068998/1071509-170x243.jpg"
   },
   {
-    "id": 23,
     "title": "Świat Pancerza",
     "url": "https://lubimyczytac.pl/ksiazka/5064307/swiat-pancerza",
     "author": "B.V. Larson",
@@ -184,7 +161,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5064000/5064307/1062956-170x243.jpg"
   },
   {
-    "id": 24,
     "title": "Milioner i ona",
     "url": "https://lubimyczytac.pl/ksiazka/5067223/milioner-i-ona",
     "author": "Mary Rain",
@@ -192,7 +168,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5067000/5067223/1071134-170x243.jpg"
   },
   {
-    "id": 25,
     "title": "Wilcze szepty",
     "url": "https://lubimyczytac.pl/ksiazka/5069985/wilcze-szepty",
     "author": "Alina Duchnowska",
@@ -200,7 +175,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5069000/5069985/1072363-170x243.jpg"
   },
   {
-    "id": 26,
     "title": "Wakacyjne love story",
     "url": "https://lubimyczytac.pl/ksiazka/5070250/wakacyjne-love-story",
     "author": "Dominika Szrejder",
@@ -208,7 +182,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5070000/5070250/1072847-170x243.jpg"
   },
   {
-    "id": 27,
     "title": "Sześć kolorów. Antologia LGBT",
     "url": "https://lubimyczytac.pl/ksiazka/5072687/szesc-kolorow-antologia-lgbt",
     "author": "K. C. Hiddenstorm, Małgorzata Garkowska",
@@ -216,7 +189,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5072000/5072687/1076936-170x243.jpg"
   },
   {
-    "id": 28,
     "title": "Eliksir miłości",
     "url": "https://lubimyczytac.pl/ksiazka/5068346/eliksir-milosci",
     "author": "Weronika Karczewska-Kosmatka",
@@ -224,7 +196,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5068000/5068346/1069967-170x243.jpg"
   },
   {
-    "id": 29,
     "title": "Bo jutra nie będzie",
     "url": "https://lubimyczytac.pl/ksiazka/5071942/bo-jutra-nie-bedzie",
     "author": "Monika Kacprzyk",
@@ -232,7 +203,6 @@
     "thumbnail": "https://s.lubimyczytac.pl/upload/books/5071000/5071942/1075646-170x243.jpg"
   },
   {
-    "id": 30,
     "title": "Chaos i spółka na tropie",
     "url": "https://lubimyczytac.pl/ksiazka/5070018/chaos-i-spolka-na-tropie",
     "author": "Marek Stelar",
