@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom';
 import useBooksContext from '../../contexts/BooksContext';
 import { findById } from '../../helpers/books';
 import Button from '../Button/Button';
-import { THUMBNAIL_DIMENSIONS } from '../../constants/books';
 import useReservationButton from '../../hooks/useReservationButton';
+import { THUMBNAIL_DIMENSIONS } from '../../constants/books';
 
 const BookDetails = () => {
   const { id } = useParams();
