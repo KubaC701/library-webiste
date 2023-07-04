@@ -13,4 +13,6 @@
   background-color: var(--color-background);
   border-radius: 8px;
   padding: 24px;
+  overflow: auto;
+  max-height: calc(100vh - 36px);
 }

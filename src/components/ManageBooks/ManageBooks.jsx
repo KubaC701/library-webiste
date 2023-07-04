@@ -7,11 +7,17 @@ import { STATUSES } from '../../constants/books';
 import useSearch from '../../hooks/useSearch';
 import Select from '../Select/Select';
 import Input from '../Input/Input';
+import { useState } from 'react';
+import Button from '../Button/Button';
+
+import Modal from '../Modal/Modal';
+import BookForm, { BOOK_FORM_TYPES } from '../BookForm/BookForm';
 
 const SHOW_ALL = 'SHOW_ALL';
 
 const ManageBooks = () => {
   const { books } = useBooksContext();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const {
     data: filteredBooks,
@@ -51,11 +57,23 @@ const ManageBooks = () => {
         />
         <Select options={filterOptions} onChange={handleSelectChange} />
       </div>
+      <Button
+        type="button"
+        className="user-search__add-user-button"
+        onClick={() => setIsModalOpen(true)}
+      >
+        Add user
+      </Button>
       <ul className="manage-books__list">
         {filteredBooks.map((book) => (
           <ManageBooksItem key={book.id} book={book} />
         ))}
       </ul>
+      {isModalOpen && (
+        <Modal>
+          <BookForm type={BOOK_FORM_TYPES.ADD} onSubmit={() => setIsModalOpen(false)} />
+        </Modal>
+      )}
     </Layout>
   );
 };

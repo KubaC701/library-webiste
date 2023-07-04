@@ -5,7 +5,6 @@ import Button from '../Button/Button';
 import './BookForm.css';
 import { addBook, updateBook } from '../../store/books/actions';
 import useBooksContext from '../../contexts/BooksContext';
-import { v4 as uuid } from 'uuid';
 import useFormValidation from '../../hooks/useFormValidation';
 
 export const BOOK_FORM_TYPES = {
@@ -13,13 +12,13 @@ export const BOOK_FORM_TYPES = {
   ADD: 'ADD',
 };
 
-const BookForm = ({ currentBook, type }) => {
+const BookForm = ({ currentBook, type, onSubmit }) => {
   const { dispatch } = useBooksContext();
-  const [author, setAuthor] = useState(currentBook.author);
-  const [title, setTitle] = useState(currentBook.title);
-  const [description, setDescription] = useState(currentBook.description);
-  const [thumbnail, setThumbnail] = useState(currentBook.thumbnail);
-  const [thumbnailToDisplay, setThumbnailToDisplay] = useState(currentBook.thumbnail);
+  const [author, setAuthor] = useState(currentBook?.author || '');
+  const [title, setTitle] = useState(currentBook?.title || '');
+  const [description, setDescription] = useState(currentBook?.description || '');
+  const [thumbnail, setThumbnail] = useState(currentBook?.thumbnail || '');
+  const [thumbnailToDisplay, setThumbnailToDisplay] = useState(currentBook?.thumbnail);
 
   const validateThumbnail = (thumbnail) => {
     return new Promise((resolve) => {
@@ -61,7 +60,7 @@ const BookForm = ({ currentBook, type }) => {
     if (!isValid) return;
 
     const book = {
-      id: currentBook.id || uuid(),
+      id: currentBook?.id,
       author,
       title,
       description,
@@ -73,6 +72,7 @@ const BookForm = ({ currentBook, type }) => {
     } else {
       dispatch(updateBook(book));
     }
+    onSubmit?.();
   };
 
   return (
@@ -82,7 +82,7 @@ const BookForm = ({ currentBook, type }) => {
         <div className="book-form__basic-info">
           <img
             src={thumbnailToDisplay}
-            alt={currentBook.title}
+            alt={currentBook?.title}
             width={THUMBNAIL_DIMENSIONS.WIDTH}
             height={THUMBNAIL_DIMENSIONS.HEIGHT}
             className="book-form__thumbnail"
