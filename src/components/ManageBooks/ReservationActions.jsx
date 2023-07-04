@@ -64,8 +64,8 @@ const ReservationActions = ({ book }) => {
         </p>
       )}
       {isModalOpen && (
-        <Modal>
-          <form onSubmit={handleBorrowFromScratch}>
+        <Modal setIsModalOpen={setIsModalOpen}>
+          <form onSubmit={handleBorrowFromScratch} className="reservation-actions__form">
             <label htmlFor="email" className="reservation-actions__label">
               Enter the email address of user who borrowed the book
             </label>

@@ -57,12 +57,8 @@ const ManageBooks = () => {
         />
         <Select options={filterOptions} onChange={handleSelectChange} />
       </div>
-      <Button
-        type="button"
-        className="user-search__add-user-button"
-        onClick={() => setIsModalOpen(true)}
-      >
-        Add user
+      <Button className="manage-books__add" onClick={() => setIsModalOpen(true)}>
+        Add book
       </Button>
       <ul className="manage-books__list">
         {filteredBooks.map((book) => (
@@ -70,7 +66,7 @@ const ManageBooks = () => {
         ))}
       </ul>
       {isModalOpen && (
-        <Modal>
+        <Modal setIsModalOpen={setIsModalOpen}>
           <BookForm type={BOOK_FORM_TYPES.ADD} onSubmit={() => setIsModalOpen(false)} />
         </Modal>
       )}

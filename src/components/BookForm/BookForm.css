@@ -30,6 +30,10 @@
   margin-bottom: 24px;
 }
 
+.book-form__input:last-child {
+  margin-bottom: 0;
+}
+
 .book-form__description-label {
   color: var(--color-text);
 }
@@ -38,9 +42,10 @@
   position: relative;
   margin-bottom: 24px;
 }
+
 .book-form__description {
   margin-top: 4px;
-  padding: 8px 8px;
+  padding: 16px;
   background-color: var(--color-background--accent);
   color: var(--color-text);
   border: none;
@@ -57,4 +62,5 @@
   width: 100%;
   flex: 1 1 250px;
   min-width: 250px;
+  margin-bottom: 24px;
 }

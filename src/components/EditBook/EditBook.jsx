@@ -14,9 +14,9 @@ const EditBook = () => {
 
   return (
     <Layout>
-      <BookForm currentBook={currentBook} type={BOOK_FORM_TYPES.EDIT} />
+      <BookForm book={currentBook} type={BOOK_FORM_TYPES.EDIT} />
       <EditBookHistory />
-      <EditBookAction />
+      <EditBookAction book={currentBook} />
     </Layout>
   );
 };

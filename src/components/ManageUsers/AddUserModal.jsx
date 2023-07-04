@@ -41,7 +41,7 @@ const AddUserModal = ({ onSubmit, setIsModalOpen }) => {
   }));
 
   return (
-    <Modal>
+    <Modal setIsModalOpen={setIsModalOpen}>
       <form className="add-user-modal__form" onSubmit={handleSubmit}>
         <div className="add-user-modal__fields">
           <Input

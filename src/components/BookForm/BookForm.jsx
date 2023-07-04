@@ -12,13 +12,13 @@ export const BOOK_FORM_TYPES = {
   ADD: 'ADD',
 };
 
-const BookForm = ({ currentBook, type, onSubmit }) => {
+const BookForm = ({ book, type, onSubmit }) => {
   const { dispatch } = useBooksContext();
-  const [author, setAuthor] = useState(currentBook?.author || '');
-  const [title, setTitle] = useState(currentBook?.title || '');
-  const [description, setDescription] = useState(currentBook?.description || '');
-  const [thumbnail, setThumbnail] = useState(currentBook?.thumbnail || '');
-  const [thumbnailToDisplay, setThumbnailToDisplay] = useState(currentBook?.thumbnail);
+  const [author, setAuthor] = useState(book?.author || '');
+  const [title, setTitle] = useState(book?.title || '');
+  const [description, setDescription] = useState(book?.description || '');
+  const [thumbnail, setThumbnail] = useState(book?.thumbnail || '');
+  const [thumbnailToDisplay, setThumbnailToDisplay] = useState(book?.thumbnail);
 
   const validateThumbnail = (thumbnail) => {
     return new Promise((resolve) => {
@@ -60,7 +60,7 @@ const BookForm = ({ currentBook, type, onSubmit }) => {
     if (!isValid) return;
 
     const book = {
-      id: currentBook?.id,
+      id: book?.id,
       author,
       title,
       description,
@@ -82,7 +82,7 @@ const BookForm = ({ currentBook, type, onSubmit }) => {
         <div className="book-form__basic-info">
           <img
             src={thumbnailToDisplay}
-            alt={currentBook?.title}
+            alt={book?.title}
             width={THUMBNAIL_DIMENSIONS.WIDTH}
             height={THUMBNAIL_DIMENSIONS.HEIGHT}
             className="book-form__thumbnail"
