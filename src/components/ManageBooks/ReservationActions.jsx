@@ -80,7 +80,9 @@ const ReservationActions = ({ book }) => {
               }}
               error={errors.email}
             />
-            <Button type="submit">Borrow</Button>
+            <Button type="submit" className="reservation-actions__borrow">
+              Borrow
+            </Button>
           </form>
         </Modal>
       )}

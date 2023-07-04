@@ -12,6 +12,10 @@ const EditBook = () => {
   const { books } = useBooksContext();
   const currentBook = findById(id, books);
 
+  if (!currentBook) {
+    return null;
+  }
+
   return (
     <Layout>
       <BookForm book={currentBook} type={BOOK_FORM_TYPES.EDIT} />

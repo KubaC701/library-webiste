@@ -8,7 +8,8 @@
 }
 
 .manage-books__search {
-  max-width: 300px;
+  max-width: 450px;
+  flex: 1;
 }
 
 .manage-books__add {
@@ -90,9 +91,13 @@
 
 .reservation-actions__input {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .reservation-actions__form {
   margin-top: 32px;
+}
+
+.reservation-actions__borrow {
+  width: 100%;
 }

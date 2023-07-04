@@ -8,8 +8,8 @@ const EditBookAction = ({ book }) => {
   const navigate = useNavigate();
 
   const handleDelete = () => {
-    dispatch(removeBook(book));
     navigate(-1);
+    dispatch(removeBook(book));
   };
 
   return (

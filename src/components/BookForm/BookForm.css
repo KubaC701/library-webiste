@@ -1,8 +1,6 @@
-.book-form__h1 {
-  margin-left: 4px;
-  font-size: 20px;
+.book-form__heading {
+  font-size: 1.5rem;
   margin-bottom: 16px;
-  color: var(--color-text);
 }
 
 .book-form__form {
@@ -15,7 +13,7 @@
 
 .book-form__basic-info {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   align-items: center;
   flex-wrap: wrap;
 }

@@ -77,7 +77,9 @@ const BookForm = ({ book, type, onSubmit }) => {
 
   return (
     <section>
-      <h1 className="book-form__h1">{type === BOOK_FORM_TYPES.ADD ? 'Add book' : 'Edit book'}</h1>
+      <h1 className="book-form__heading">
+        {type === BOOK_FORM_TYPES.ADD ? 'Add book' : 'Edit book'}
+      </h1>
       <form className="book-form__form" onSubmit={handleSubmit}>
         <div className="book-form__basic-info">
           <img
