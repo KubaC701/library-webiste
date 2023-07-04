@@ -3,12 +3,18 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 36px;
+  margin-bottom: 16px;
   padding: 0 16px;
 }
 
 .manage-books__search {
-  max-width: 300px;
+  max-width: 450px;
+  flex: 1;
+}
+
+.manage-books__add {
+  width: 150px;
+  margin: 0 0 32px 16px;
 }
 
 .manage-books__list {
@@ -85,5 +91,13 @@
 
 .reservation-actions__input {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.reservation-actions__form {
+  margin-top: 32px;
+}
+
+.reservation-actions__borrow {
+  width: 100%;
 }

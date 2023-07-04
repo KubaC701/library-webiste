@@ -1,9 +1,14 @@
 import './Modal.css';
 
-const Modal = ({ children }) => {
+const Modal = ({ children, setIsModalOpen }) => {
   return (
     <div className="modal">
-      <div className="modal__content">{children}</div>
+      <div className="modal__content">
+        {children}
+        <button className="modal__close" onClick={() => setIsModalOpen(false)}>
+          X
+        </button>
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@ export const ACTION_TYPES = {
 
 export const addBook = (book) => ({
   type: ACTION_TYPES.ADD_BOOK,
-  payload: { id: uuid(), ...book },
+  payload: { ...book, status: STATUSES.AVAILABLE, reservation: null, history: [], id: uuid() },
 });
 
 export const removeBook = (book) => ({

@@ -4,38 +4,31 @@ import Input from '../Input/Input';
 import Button from '../Button/Button';
 import { ROLES } from '../../constants/users';
 import Select from '../Select/Select';
+import useFormValidation from '../../hooks/useFormValidation';
 
 const AddUserModal = ({ onSubmit, setIsModalOpen }) => {
   const [role, setRole] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-  const [repeatPasswordError, setRepeatPasswordError] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [repeatPassword, setRepeatPassword] = useState('');
+
+  const { errors, validate, clearError } = useFormValidation(
+    {
+      email,
+      password,
+      'repeat password': repeatPassword,
+    },
+    {
+      'repeat password': {
+        validate: (value) => value === password,
+        message: 'Passwords do not match',
+      },
+    }
+  );
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const formData = new FormData(event.target);
-    const { email, password, repeatPassword } = Object.fromEntries(formData.entries());
-
-    let isValid = true;
-
-    if (!email) {
-      setEmailError('Email is required');
-      isValid = false;
-    }
-    if (!password) {
-      setPasswordError('Password is required');
-      isValid = false;
-    }
-
-    if (!repeatPassword) {
-      setRepeatPasswordError('Repeat password is required');
-      isValid = false;
-    }
-    if (password !== repeatPassword) {
-      setRepeatPasswordError('Passwords do not match');
-      isValid = false;
-    }
+    const isValid = validate();
 
     if (!isValid) return;
 
@@ -48,18 +41,21 @@ const AddUserModal = ({ onSubmit, setIsModalOpen }) => {
   }));
 
   return (
-    <Modal>
+    <Modal setIsModalOpen={setIsModalOpen}>
       <form className="add-user-modal__form" onSubmit={handleSubmit}>
         <div className="add-user-modal__fields">
           <Input
             label="Email"
             className="add-user-modal__input add-user-modal__input--email"
             type="text"
-            error={emailError}
+            error={errors.email}
             autoFocus
             name="email"
             id="email"
-            onChange={() => setEmailError('')}
+            onChange={(event) => {
+              clearError('email');
+              setEmail(event.target.value);
+            }}
           />
           <Select
             options={options}
@@ -71,19 +67,25 @@ const AddUserModal = ({ onSubmit, setIsModalOpen }) => {
           label="Password"
           className="add-user-modal__input"
           type="password"
-          error={passwordError}
+          error={errors.password}
           name="password"
           id="password"
-          onChange={() => setPasswordError('')}
+          onChange={(event) => {
+            clearError('password');
+            setPassword(event.target.value);
+          }}
         />
         <Input
           label="Repeat password"
           className="add-user-modal__input"
           type="password"
-          error={repeatPasswordError}
+          error={errors['repeat password']}
           name="repeatPassword"
           id="repeatPassword"
-          onChange={() => setRepeatPasswordError('')}
+          onChange={(event) => {
+            clearError('repeat password');
+            setRepeatPassword(event.target.value);
+          }}
         />
         <div className="add-user-modal__actions">
           <Button type="button" variant="outline" onClick={() => setIsModalOpen(false)}>

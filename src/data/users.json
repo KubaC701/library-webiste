@@ -1,3 +1,5 @@
-[{ "email": "admin@lib.com", "password": "admin", "role": "admin" }, 
-{ "email": "librarian@lib.com", "password": "librarian", "role": "librarian" }, 
-{ "email": "customer@lib.com", "password": "customer", "role": "user" }]
+[
+  { "email": "admin@lib.com", "password": "admin", "role": "admin" },
+  { "email": "librarian@lib.com", "password": "librarian", "role": "librarian" },
+  { "email": "customer@lib.com", "password": "customer", "role": "user" }
+]

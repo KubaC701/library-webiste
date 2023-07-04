@@ -1,48 +1,3 @@
-.edit-book-form__h1 {
-  margin-left: 4px;
-  font-size: 20px;
-  margin-bottom: 16px;
-  color: var(--color-text);
-}
-
-.edit-book-form__form {
-  flex-direction: column;
-}
-
-.edit-book-form__save-changes {
-  margin: 16px 0 24px;
-}
-
-.edit-book-form__basic-info {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.edit-book-form__thumbnail {
-  margin-top: 20px;
-  max-width: 85px;
-  height: auto;
-}
-
-.edit-book-form__input {
-  width: 100%;
-}
-
-.edit-book-form__description-label {
-  color: var(--color-text);
-}
-
-.edit-book-form__description {
-  margin-top: 8px;
-  padding: 8px 8px;
-  background-color: var(--color-background--accent);
-  color: var(--color-text);
-  border: none;
-  border-radius: 8px;
-  width: 100%;
-}
-
 .edit-book-history__container {
   margin: 32px 0;
 }
@@ -66,15 +21,11 @@
   justify-content: center;
 }
 
-.edit-book-form__save-changes {
-  margin-top: 16px;
+.edit-book-action__borrow {
+  width: 100%;
 }
-
 .edit-book-action__delete {
   margin-top: 16px;
-}
-
-.edit-book-form__inputs {
   width: 100%;
 }
 

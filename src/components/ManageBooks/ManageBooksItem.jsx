@@ -5,7 +5,7 @@ import { THUMBNAIL_DIMENSIONS } from '../../constants/books';
 const ManageBooksItem = ({ book }) => {
   return (
     <li className="manage-books-item">
-      <Link to={`/books/${book.id}`} className="manage-books-item__link">
+      <Link to={`/manage-books/${book.id}`} className="manage-books-item__link">
         <div className="manage-books-item__details">
           <img
             src={book.thumbnail}

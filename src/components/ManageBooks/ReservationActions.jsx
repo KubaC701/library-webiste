@@ -5,17 +5,23 @@ import { borrowBook, returnBook } from '../../store/books/actions';
 import Modal from '../Modal/Modal';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import useFormValidation from '../../hooks/useFormValidation';
 
 const ReservationActions = ({ book }) => {
   const { dispatch } = useBooksContext();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [userEmail, setUserEmail] = useState('');
+  const { validate, errors, clearError } = useFormValidation({
+    email: userEmail,
+  });
 
   const openModal = () => {
     setIsModalOpen(true);
   };
   const handleBorrowFromScratch = (event) => {
     event.preventDefault();
+    const isValid = validate();
+    if (!isValid) return;
     dispatch(borrowBook(book, userEmail));
     setIsModalOpen(false);
   };
@@ -58,8 +64,8 @@ const ReservationActions = ({ book }) => {
         </p>
       )}
       {isModalOpen && (
-        <Modal>
-          <form onSubmit={handleBorrowFromScratch}>
+        <Modal setIsModalOpen={setIsModalOpen}>
+          <form onSubmit={handleBorrowFromScratch} className="reservation-actions__form">
             <label htmlFor="email" className="reservation-actions__label">
               Enter the email address of user who borrowed the book
             </label>
@@ -68,9 +74,15 @@ const ReservationActions = ({ book }) => {
               type="text"
               value={userEmail}
               id="email"
-              onChange={(event) => setUserEmail(event.target.value)}
+              onChange={(event) => {
+                clearError('email');
+                setUserEmail(event.target.value);
+              }}
+              error={errors.email}
             />
-            <Button type="submit">Borrow</Button>
+            <Button type="submit" className="reservation-actions__borrow">
+              Borrow
+            </Button>
           </form>
         </Modal>
       )}
