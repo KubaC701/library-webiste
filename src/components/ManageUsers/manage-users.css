@@ -75,3 +75,7 @@
 .add-user-modal__form {
   margin-top: 32px;
 }
+
+.add-user-modal__button {
+  flex: 1;
+}

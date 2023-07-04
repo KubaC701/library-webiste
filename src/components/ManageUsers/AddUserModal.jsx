@@ -7,7 +7,7 @@ import Select from '../Select/Select';
 import useFormValidation from '../../hooks/useFormValidation';
 
 const AddUserModal = ({ onSubmit, setIsModalOpen }) => {
-  const [role, setRole] = useState('');
+  const [role, setRole] = useState(ROLES.USER);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
@@ -88,10 +88,17 @@ const AddUserModal = ({ onSubmit, setIsModalOpen }) => {
           }}
         />
         <div className="add-user-modal__actions">
-          <Button type="button" variant="outline" onClick={() => setIsModalOpen(false)}>
+          <Button
+            className="add-user-modal__button "
+            type="button"
+            variant="outline"
+            onClick={() => setIsModalOpen(false)}
+          >
             Cancel
           </Button>
-          <Button type="submit">Add user</Button>
+          <Button type="submit" className="add-user-modal__button">
+            Add user
+          </Button>
         </div>
       </form>
     </Modal>
