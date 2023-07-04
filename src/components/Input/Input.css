@@ -24,4 +24,5 @@
   position: absolute;
   bottom: -16px;
   left: 4px;
+  white-space: nowrap;
 }
