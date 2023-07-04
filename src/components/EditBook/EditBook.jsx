@@ -15,7 +15,7 @@ const EditBook = () => {
   return (
     <Layout>
       <BookForm book={currentBook} type={BOOK_FORM_TYPES.EDIT} />
-      <EditBookHistory />
+      <EditBookHistory book={currentBook} />
       <EditBookAction book={currentBook} />
     </Layout>
   );
