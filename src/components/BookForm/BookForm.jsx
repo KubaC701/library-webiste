@@ -59,7 +59,7 @@ const BookForm = ({ book, type, onSubmit }) => {
     const isValid = validate();
     if (!isValid) return;
 
-    const book = {
+    const newBook = {
       id: book?.id,
       author,
       title,
@@ -68,9 +68,9 @@ const BookForm = ({ book, type, onSubmit }) => {
     };
 
     if (type === BOOK_FORM_TYPES.ADD) {
-      dispatch(addBook(book));
+      dispatch(addBook(newBook));
     } else {
-      dispatch(updateBook(book));
+      dispatch(updateBook(newBook));
     }
     onSubmit?.();
   };
