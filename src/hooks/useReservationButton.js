@@ -19,8 +19,8 @@ const useReservationButton = (book) => {
   };
 
   const getButtonState = () => {
-    if (book.status === STATUSES.RESERVED) {
-      if (book.reservation?.user === user?.email) {
+    if (book?.status === STATUSES.RESERVED) {
+      if (book?.reservation?.user === user?.email) {
         return {
           disabled: false,
           text: 'Cancel reservation',
@@ -29,7 +29,7 @@ const useReservationButton = (book) => {
       }
       return { disabled: true, text: 'Reserved' };
     }
-    if (book.status === STATUSES.BORROWED) return { disabled: true, text: 'Borrowed' };
+    if (book?.status === STATUSES.BORROWED) return { disabled: true, text: 'Borrowed' };
     return { disabled: false, text: 'Reserve', onClick: () => makeReservation(book) };
   };
 

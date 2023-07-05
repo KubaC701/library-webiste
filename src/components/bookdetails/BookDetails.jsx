@@ -1,6 +1,6 @@
 import './book-details.css';
 import Layout from '../Layout/Layout';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import useBooksContext from '../../contexts/BooksContext';
 import { findById } from '../../helpers/books';
 import Button from '../Button/Button';
@@ -12,6 +12,10 @@ const BookDetails = () => {
   const { books } = useBooksContext();
   const currentBook = findById(id, books);
   const { onClick, disabled, text } = useReservationButton(currentBook);
+
+  if (!currentBook) {
+    return <Navigate to="/404" replace />;
+  }
 
   return (
     <Layout>

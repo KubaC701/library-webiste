@@ -6,6 +6,7 @@ import ManageUsers from '../ManageUsers/ManageUsers';
 import Login from '../Login/Login';
 import { ROLES } from '../../constants/users';
 import EditBook from '../EditBook/EditBook';
+import NotFound from '../NotFound/NotFound';
 
 export const ROUTES = [
   {
@@ -55,6 +56,13 @@ export const ROUTES = [
     label: '',
     roles: [],
     component: <BookDetails />,
+    isProtected: false,
+  },
+  {
+    path: '*',
+    label: '',
+    roles: [],
+    component: <NotFound />,
     isProtected: false,
   },
 ];
